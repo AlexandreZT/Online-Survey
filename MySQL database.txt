@@ -1,0 +1,22 @@
+create database 2proj;
+
+use 2proj;
+
+CREATE TABLE membre (
+id INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
+pseudo VARCHAR(25) NOT NULL,
+mail VARCHAR(25) NOT NULL,
+mdp CHAR(32) NOT NULL);
+
+CREATE TABLE sondage (
+id INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
+owner INT NOT NULL,
+title VARCHAR(100) NOT NULL,
+status INT NOT NULL,
+FOREIGN KEY(owner) REFERENCES membre(id));
+
+CREATE TABLE question (
+sondage INT NOT NULL,
+question VARCHAR(255) NOT NULL,
+type INT NOT NULL,
+FOREIGN KEY(sondage) REFERENCES sondage(id));

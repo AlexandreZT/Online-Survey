@@ -89,7 +89,7 @@ session_start();
   <!-- zone d'inscription  -->
   <?php
 
-/* page: registration.php */
+/* page: signin.php */
 
 //connexion à la base de données:
 $BDD = array();
@@ -143,7 +143,7 @@ if ($AfficherFormulaire == 1) {
 ?>
     <!-- 
 Les balises <form> sert à dire que c'est un formulaire
-on lui demande de faire fonctionner la page registration.php une fois le bouton "S'inscrire" cliqué
+on lui demande de faire fonctionner la page signin.php une fois le bouton "S'inscrire" cliqué
 on lui dit également que c'est un formulaire de type "POST"
 
 Les balises <input> sont les champs de formulaire
@@ -153,8 +153,8 @@ type="submit" sera un bouton pour valider le formulaire
 name="nom de l'input" sert à le reconnaitre une fois le bouton submit cliqué, pour le code PHP
 -->
     <div id="container">
-        <form class="logs" action="registration.php" method="post">
-            <h2>Registration</h2>
+        <form class="logs" action="signin.php" method="post">
+            <h2>Sign In</h2>
             <label><b>Username</b></label>
             <input type="text" name="pseudo" placeholder="Enter your username here" value="" />
             <label><b>Password</b></label>
