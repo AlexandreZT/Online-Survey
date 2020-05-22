@@ -1,3 +1,8 @@
+<?php
+  session_start(); // Démarre une nouvelle session ou reprend une session existante
+  $mysqli = mysqli_connect("127.0.0.1", "root", "", "2proj"); // connexion à la base de donnée
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -55,7 +60,20 @@
           <li><a href="#services">Services</a></li>
           <li><a href="#portfolio">Exemples</a></li>
           <li><a href="#pricing">Abonnements</a></li>
-          <li class="get-started"><a href="login.php">Connexion</a></li>
+          <?php
+              if(isset($_SESSION['pseudo'])) {
+            ?> 
+            <li><a href="logout.php">Déconnexion</a></li>
+            <!-- <li class="get-started"><a href="login.php">Connexion</a></li> -->
+            <?php
+              }
+              else {
+            ?>
+            <li class="get-started"><a href="login.php">Connexion</a></li>
+            <!-- <li><a href="logout.php">Déconnexion</a></li> -->
+            <?php
+          }
+          ?>
         </ul>
       </nav>
       <!-- .nav-menu -->
@@ -73,7 +91,7 @@
           <h1 data-aos="fade-up">Créez <span>rapidement</span> et <span>facilement</span> vos sondages</h1>
           <h5 data-aos="fade-up" data-aos-delay="400">Vous avez des questions ? Nous vous donnons des réponses</h5>
           <div data-aos="fade-up" data-aos-delay="800">
-            <a href="signin.php">Inscription gratuite</a>
+            <a href="signin.php" class="btn-get-started scrollto">Inscription gratuite</a>
           </div>
         </div>
         <div class="col-lg-6 order-1 order-lg-2 hero-img" data-aos="fade-left" data-aos-delay="200">

@@ -1,5 +1,4 @@
 <?php
-
 session_start(); // à mettre tout en haut du fichier .php, cette fonction propre à PHP servira à maintenir la $_SESSION
 if (isset($_POST['connexion'])) { // si le bouton "Connexion" est appuyé
     // on vérifie que le champ "Pseudo" n'est pas vide
@@ -114,7 +113,20 @@ if (isset($_POST['connexion'])) { // si le bouton "Connexion" est appuyé
           </li>
           <li><a href="#contact">Contact</a></li>-->
 
-          <li class="get-started"><a href="login.php">Connexion</a></li>
+          <?php
+              if(isset($_SESSION['pseudo'])) {
+            ?> 
+            <li><a href="logout.php">Déconnexion</a></li>
+            <!-- <li class="get-started"><a href="login.php">Connexion</a></li> -->
+            <?php
+              }
+              else {
+            ?>
+            <li class="get-started"><a href="login.php">Connexion</a></li>
+            <!-- <li><a href="logout.php">Déconnexion</a></li> -->
+            <?php
+          }
+          ?>
           <li class="get-started"><a href="signin.php">Inscription</a></li>
           <li><button id="dark-mode">Dark Mode</button> </li>
         </ul>
