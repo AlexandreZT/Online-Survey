@@ -17,17 +17,20 @@
 	if (isset($_SESSION['pseudo'])) { // si un utilisateur est connecté
 		// echo "<p>Votre id : $_SESSION[id]</p> </br>";
 		echo "<p id='welcome'>Bonjour $_SESSION[pseudo]</p>";
+		echo "<p id='welcome'>Ton id : $_SESSION[id]</p>";
 	?>
 
 
 	<section id="questionnaire">
 	
-	<form id="creation"> <!-- Type de réponse, option obligatoire, choix de réponse-->
-		<label for="question">Donner un titre à votre sondage :</label>
+	<form id="create_survey" action="poll-creation.php" method="post"> <!-- Type de réponse, option obligatoire, choix de réponse-->
+		<label><b>Donner un titre à votre sondage :</b></label>
 		<br>
 		<!-- <textarea style="resize: none" name="Text1" cols="40" rows="2" placeholder="Saisissez un titre de sondage"></textarea> -->
-        <input type="text" id="question" name="question" size="50" maxlength="100" placeholder="Saisissez un titre de sondage">
-        <input type="submit" name="create_survey" value="Créer">
+        <input type="text" name="create_survey" size="50" maxlength="100" placeholder="Saisissez un titre de sondage" value="">
+		<input type="submit" name="Create_Survey" value="Créer">
+	</form>
+	<form id="create_qestions" action="poll-creation.php" method="post">
 		<p>// new screen</p>
 		<label>Q1</label> <!-- $qNumber-->
 		<input type="text" id="question" name="question" size="50" maxlength="100" placeholder="Saisissez votre question">
@@ -99,10 +102,12 @@
 	?>
 	
 	<?php
+		echo "<p> pas de pb</p>";
 		// permet d'ajouter une todolist
 		if (isset($_POST['create_survey'])) {
-			$req_add = $mysqli->query("INSERT INTO surverys (`title`,`status`) VALUES ('$_POST[create_survey]', 0)"); // `` permit to escape reserved word like status, '' doesn't work !
+			$req_add = $mysqli->query("INSERT INTO surveys (`owner`, `title`,`status`) VALUES ($_SESSION[id], '$_POST[create_survey]', 0)"); // `` permit to escape reserved word like status, '' doesn't work !
 		}
+		echo "<p> toujours pas</p>";
 	?>
 	
     <script src="script.js"></script>
