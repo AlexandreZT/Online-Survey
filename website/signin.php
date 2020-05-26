@@ -116,8 +116,8 @@ if (!$mysqli) {
     echo "<p>Connexion non établie.</p>";
     exit;
 }
-//création automatique de la table membres, une fois créée, vous pouvez supprimer les lignes de code suivantes:
-mysqli_query($mysqli, "CREATE TABLE IF NOT EXISTS `" . $BDD['db'] . "`.`membre` ( `id` INT NOT NULL AUTO_INCREMENT , `pseudo` VARCHAR(25) NOT NULL, `mail` VARCHAR(25) NOT NULL, `mdp` CHAR(32) NOT NULL , PRIMARY KEY (`id`)) ENGINE = MyISAM;") . mysqli_error($mysqli);
+//création automatique de la table members, une fois créée, vous pouvez supprimer les lignes de code suivantes:
+mysqli_query($mysqli, "CREATE TABLE IF NOT EXISTS `" . $BDD['db'] . "`.`members` ( `id` INT NOT NULL AUTO_INCREMENT , `pseudo` VARCHAR(25) NOT NULL, `mail` VARCHAR(25) NOT NULL, `mdp` CHAR(32) NOT NULL , PRIMARY KEY (`id`)) ENGINE = MyISAM;") . mysqli_error($mysqli);
 //la table est créée avec les paramètres suivants:
 //champ "id": en auto increment pour un id unique, peux vous servir pour une identification future
 //champ "pseudo": en varchar de 0 à 25 caractères
@@ -138,12 +138,12 @@ if (isset($_POST['pseudo'], $_POST['mail'], $_POST['mdp'])) { //l'utilisateur à
         echo "<p id='reginfo'>Le champ Mail est vide.</p>";
     } elseif (empty($_POST['mdp'])) { // Le champ mot de passe est vide
         echo "<p id='reginfo'>Le champ Mot de passe est vide.</p>";
-    } elseif (mysqli_num_rows(mysqli_query($mysqli, "SELECT * FROM membre WHERE pseudo='" . $_POST['pseudo'] . "'")) == 1) { //on vérifie que ce pseudo n'est pas déjà utilisé par un autre membre
+    } elseif (mysqli_num_rows(mysqli_query($mysqli, "SELECT * FROM members WHERE pseudo='" . $_POST['pseudo'] . "'")) == 1) { //on vérifie que ce pseudo n'est pas déjà utilisé par un autre membre
         echo "<p id='reginfo'>Ce pseudo est déjà utilisé.</p>";
     } else {
         //toutes les vérifications sont faites, on passe à l'enregistrement dans la base de données:
         //Bien évidement il s'agit là d'un script simplifié au maximum, libre à vous de rajouter des conditions avant l'enregistrement comme la longueur minimum du mot de passe par exemple
-        if (!mysqli_query($mysqli, "INSERT INTO membre SET pseudo='" . $_POST['pseudo'] . "', mail='" . $_POST['mail'] . "', mdp='" . md5($_POST['mdp']) . "'")) { //on crypte le mot de passe avec la fonction propre à PHP: md5()
+        if (!mysqli_query($mysqli, "INSERT INTO members SET pseudo='" . $_POST['pseudo'] . "', mail='" . $_POST['mail'] . "', mdp='" . md5($_POST['mdp']) . "'")) { //on crypte le mot de passe avec la fonction propre à PHP: md5()
             echo "Une erreur s'est produite: " . mysqli_error($mysqli); //je conseille de ne pas afficher les erreurs aux visiteurs mais de l'enregistrer dans un fichier log
         } else {
             echo "<p id='reginfo'>Vous êtes inscrit avec succès!</p>";
@@ -166,7 +166,7 @@ type="submit" sera un bouton pour valider le formulaire
 name="nom de l'input" sert à le reconnaitre une fois le bouton submit cliqué, pour le code PHP
 -->
     <div id="container">
-        <form class="logs" action="signin.php" method="post">
+        <form class="login" action="signin.php" method="post"> <!-- nom de class prete à confusion -->
             <h2>Sign In</h2>
             <label><b>Username</b></label>
             <input type="text" name="pseudo" placeholder="Enter your username here" value="" />

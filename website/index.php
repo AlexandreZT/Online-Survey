@@ -57,7 +57,7 @@
         <ul>
           <li class="active"><a href="#header">Accueil</a></li>
           <li><a href="#about">Nous concernant</a></li>
-          <li><a href="#services">Services</a></li>
+          <li><a href="poll-creation.php">Questionnaire</a></li>
           <li><a href="#portfolio">Exemples</a></li>
           <li><a href="#pricing">Abonnements</a></li>
           <?php

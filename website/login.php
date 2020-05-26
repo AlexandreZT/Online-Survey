@@ -20,7 +20,7 @@ if (isset($_POST['connexion'])) { // si le bouton "Connexion" est appuyé
                 $logerror =  "Erreur de connexion à la base de données.";
             } else {
                 // on fait maintenant la requête dans la base de données pour rechercher si ces données existe et correspondent:
-                $Requete = mysqli_query($mysqli, "SELECT * FROM membre WHERE pseudo = '" . $Pseudo . "' AND mdp = '" . md5($MotDePasse) . "'"); //si vous avez enregistré le mot de passe en md5() il vous suffira de faire la vérification en mettant mdp = '".md5($MotDePasse)."' au lieu de mdp = '".$MotDePasse."'
+                $Requete = mysqli_query($mysqli, "SELECT * FROM members WHERE pseudo = '" . $Pseudo . "' AND mdp = '" . md5($MotDePasse) . "'"); //si vous avez enregistré le mot de passe en md5() il vous suffira de faire la vérification en mettant mdp = '".md5($MotDePasse)."' au lieu de mdp = '".$MotDePasse."'
                 // si il y a un résultat, mysqli_num_rows() nous donnera alors 1
                 // si mysqli_num_rows() retourne 0 c'est qu'il a trouvé aucun résultat
                 if (mysqli_num_rows($Requete) == 0) {
@@ -159,7 +159,7 @@ if (isset($_POST['connexion'])) { // si le bouton "Connexion" est appuyé
         if ((isset($Pseudo) and isset($open))) {
             echo "<p><b>You're connected $Pseudo!</b></p>";
             // echo "<p>Status de la sessions : $session_status </p>";
-            $req_id = $mysqli->query("SELECT id FROM membre WHERE pseudo = '$_SESSION[pseudo]'");
+            $req_id = $mysqli->query("SELECT id FROM members WHERE pseudo = '$_SESSION[pseudo]'");
             $row = mysqli_fetch_array($req_id); // sous forme de tableau
             $_SESSION['id'] = $row['id']; // Je récupère l'id
         }
