@@ -56,7 +56,7 @@
       <nav class="nav-menu d-none d-lg-block">
         <ul>
           <!--<li class="active"><a href="#header">Accueil</a></li>-->
-          <li><a href="#about">Nous concernant</a></li>
+          <li><a href="#about">Plus d'Infos</a></li>
           <li><a href="#pricing">Tarification & Abonnements</a></li>
           <li><a href="poll-creation.php">Questionnaire</a></li>
           
@@ -145,14 +145,13 @@
       <div class="container">
 
         <div class="section-title" data-aos="fade-up">
-          <h2>Nous Concernant</h2>
+          <h2>Plus d'infos</h2>
         </div>
 
         <div class="row content">
           <div class="col-lg-6" data-aos="fade-up" data-aos-delay="150">
             <p>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
-              magna aliqua.
+              Big Brother, société mère basée dans le bassin rennais vous propose
             </p>
             <ul>
               <li><i class="ri-check-double-line"></i> Ullamco laboris nisi ut aliquip ex ea commodo consequat</li>

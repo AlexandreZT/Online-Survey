@@ -48,7 +48,6 @@ if (isset($_POST['connexion'])) { // si le bouton "Connexion" est appuyé
 
   <!-- Favicons -->
   <link href="assets/img/favicon.png" rel="icon">
-  <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
 
   <!-- Google Fonts -->
  
@@ -67,14 +66,6 @@ if (isset($_POST['connexion'])) { // si le bouton "Connexion" est appuyé
   <!-- Template Main CSS File -->
   <link href="assets/css/login-style.css" rel="stylesheet">
 
-  <!-- =======================================================
-  * Template Name: Vesperr - v2.0.0
-  * Template URL: https://bootstrapmade.com/vesperr-free-bootstrap-template/
-  * Author: BootstrapMade.com
-  * License: https://bootstrapmade.com/license/
-  ======================================================== -->
-</head>
-
 <body>
 
   <!-- ======= Header ======= -->
@@ -84,34 +75,14 @@ if (isset($_POST['connexion'])) { // si le bouton "Connexion" est appuyé
       <div class="logo mr-auto">
         <!--<h1 class="text-light"><a href="index.php"><span>Vesperr</span></a></h1>-->
         <!-- Uncomment below if you prefer to use an image logo -->
-        <a href="index.php"><img src="assets/img/logo.png" alt="" class="img-fluid"></a>
+        <a href="index.php"><img src="assets/img/banner.png" alt="" class="img-fluid"></a>
       </div>
 
       <nav class="nav-menu d-none d-lg-block">
         <ul>
-          <li class="active"><a href="index.php">Accueil</a></li>
-          <li><a href="#about">Nous concernant</a></li>
-          <li><a href="#services">Services</a></li>
-          <li><a href="#portfolio">Exemples</a></li>
-          <li><a href="#pricing">Abonnements</a></li>
-          <!--<li class="drop-down"><a href="">Drop Down</a>
-            <ul>
-              <li><a href="#">Drop Down 1</a></li>
-              <li class="drop-down"><a href="#">Drop Down 2</a>
-                <ul>
-                  <li><a href="#">Deep Drop Down 1</a></li>
-                  <li><a href="#">Deep Drop Down 2</a></li>
-                  <li><a href="#">Deep Drop Down 3</a></li>
-                  <li><a href="#">Deep Drop Down 4</a></li>
-                  <li><a href="#">Deep Drop Down 5</a></li>
-                </ul>
-              </li>
-              <li><a href="#">Drop Down 3</a></li>
-              <li><a href="#">Drop Down 4</a></li>
-              <li><a href="#">Drop Down 5</a></li>
-            </ul>
-          </li>
-          <li><a href="#contact">Contact</a></li>-->
+        <li><a href="#about">Plus d'Infos</a></li>
+          <li><a href="#pricing">Tarification & Abonnements</a></li>
+          <li><a href="poll-creation.php">Questionnaire</a></li>
 
           <?php
               if(isset($_SESSION['pseudo'])) {
@@ -128,7 +99,6 @@ if (isset($_POST['connexion'])) { // si le bouton "Connexion" est appuyé
           }
           ?>
           <li class="get-started"><a href="signin.php">Inscription</a></li>
-          <li><button id="dark-mode">Dark Mode</button> </li>
         </ul>
       </nav><!-- .nav-menu -->
 
