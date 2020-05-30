@@ -167,14 +167,14 @@ name="nom de l'input" sert à le reconnaitre une fois le bouton submit cliqué, 
 -->
     <div id="container">
         <form class="login" action="signin.php" method="post"> <!-- nom de class prete à confusion -->
-            <h2>Inscription</h2>
-            <label><b>Nom d'utilisateur</b></label>
+            <h2>Sign In</h2>
+            <label><b>Username</b></label>
             <input type="text" name="pseudo" placeholder="Enter your username here" value="" />
-            <label><b>Mot de Passe</b></label>
+            <label><b>Password</b></label>
             <input type="password" name="mdp" placeholder="Enter your password here" value="" />
             <label><b>E-Mail</b></label>
             <input type="text" name="mail" placeholder="Enter a valide e-mail here" value="" />
-            <a id="already" href="login.php"><p style="text-align:center">Déjà inscrit ?</p></a>
+            <a id="already" href="login.php"><p style="text-align:center">Already an account ?</p></a>
             <input type="submit" name="connexion" value="Sign In" />
         </form>
     </div>

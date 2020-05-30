@@ -48,6 +48,7 @@ if (isset($_POST['connexion'])) { // si le bouton "Connexion" est appuyé
 
   <!-- Favicons -->
   <link href="assets/img/favicon.png" rel="icon">
+  <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
 
   <!-- Google Fonts -->
  
@@ -93,6 +94,24 @@ if (isset($_POST['connexion'])) { // si le bouton "Connexion" est appuyé
           <li><a href="#services">Services</a></li>
           <li><a href="#portfolio">Exemples</a></li>
           <li><a href="#pricing">Abonnements</a></li>
+          <!--<li class="drop-down"><a href="">Drop Down</a>
+            <ul>
+              <li><a href="#">Drop Down 1</a></li>
+              <li class="drop-down"><a href="#">Drop Down 2</a>
+                <ul>
+                  <li><a href="#">Deep Drop Down 1</a></li>
+                  <li><a href="#">Deep Drop Down 2</a></li>
+                  <li><a href="#">Deep Drop Down 3</a></li>
+                  <li><a href="#">Deep Drop Down 4</a></li>
+                  <li><a href="#">Deep Drop Down 5</a></li>
+                </ul>
+              </li>
+              <li><a href="#">Drop Down 3</a></li>
+              <li><a href="#">Drop Down 4</a></li>
+              <li><a href="#">Drop Down 5</a></li>
+            </ul>
+          </li>
+          <li><a href="#contact">Contact</a></li>-->
 
           <?php
               if(isset($_SESSION['pseudo'])) {
@@ -128,7 +147,7 @@ if (isset($_POST['connexion'])) { // si le bouton "Connexion" est appuyé
         <input type="password" name="mdp" placeholder="Veuillez saisir votre mot de passe" value="" />
         <a href="registration.php"></a>
 
-        <input type="submit" name="connexion" value="Connexion" />
+        <input type="submit" name="connexion" value="Log In" />
         
     </form>
 </div>

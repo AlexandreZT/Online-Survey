@@ -3,20 +3,20 @@
 --------------------------------------------------------------*/
 body {
   font-family: "Quicksand", sans-serif;
-  /*color: #444444;*/
+  color: #444444;
   background-color: #ffffff;
 }
 
 span {
-  color: #59BDB6;
+  color: #34db66;
 }
 
 a {
-  color: #59BDB6;
+  color: #34db66;
 }
 
 a:hover {
-  color: #59BDB6;
+  color: #34db66;
   text-decoration: none;
 }
 
@@ -24,7 +24,6 @@ h1, h2, h3, h4, h5, h6 {
   font-family: "Quicksand", sans-serif;
   text-align: center;
 }
-
 
 
 .hero-container {
@@ -50,13 +49,13 @@ h1, h2, h3, h4, h5, h6 {
   width: 40px;
   height: 40px;
   border-radius: 4px;
-  background: #59BDB6;
+  background: #34db66;
   color: #fff;
   transition: all 0.4s;
 }
 
 .back-to-top i:hover {
-  background: #59BDB6;
+  background: #34db66;
   color: #fff;
 }
 
@@ -76,13 +75,13 @@ h1, h2, h3, h4, h5, h6 {
   height: 80px;
   z-index: 997;
   transition: all 0.5s;
-  background: rgb(89, 189, 182);
+  background-color: white;
 }
 
 #header.header-scrolled {
-  box-shadow: 0px 2px 15px rgba(0, 0, 0, 0.8);
+  box-shadow: 0px 2px 15px rgba(0, 0, 0, 0.1);
   height: 60px;
-  background: rgba(89, 189, 182, 0.9);
+  background: #fff;
 }
 
 #header .logo h1 {
@@ -135,7 +134,7 @@ h1, h2, h3, h4, h5, h6 {
 .nav-menu a {
   display: block;
   position: relative;
-  color: white;
+  color: #555555;
   padding: 8px 0 12px 25px;
   transition: 0.3s;
   font-size: 14px;
@@ -143,20 +142,12 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .nav-menu a:hover, .nav-menu .active > a, .nav-menu li:hover > a {
-  color: rgba(225, 255, 255, 0.5);
+  color: #34db66;
   text-decoration: none;
 }
 
 .nav-menu .get-started a {
-  background: #59BDB6;
-  color: #fff;
-  border-radius: 50px;
-  margin: 0 0 0 30px;
-  padding: 10px 25px;
-}
-
-.nav-menu .get-started a {
-  background: rgba(255, 255, 255, 0.1);
+  background: #34db66;
   color: #fff;
   border-radius: 50px;
   margin: 0 0 0 30px;
@@ -164,11 +155,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .nav-menu .get-started a:hover {
-  background: rgba(255, 255, 255, 0.5);
-  color: #fff;
-}
-.nav-menu .log-out a:hover {
-  background: red;
+  background: #34db66;
   color: #fff;
 }
 
@@ -252,7 +239,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .mobile-nav a:hover, .mobile-nav .active > a, .mobile-nav li:hover > a {
-  color: #59BDB6;
+  color: #34db66;
   text-decoration: none;
 }
 
@@ -262,7 +249,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .mobile-nav .get-started a {
-  background: #59BDB6;
+  background: #34db66;
   color: #fff;
   border-radius: 50px;
   margin: 0 15px;
@@ -271,7 +258,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .mobile-nav .get-started a:hover {
-  background: #59BDB6;
+  background: #34db66;
   color: #fff;
 }
 
@@ -361,12 +348,12 @@ h1, h2, h3, h4, h5, h6 {
   padding: 10px 30px;
   border-radius: 50px;
   transition: 0.5s;
-  color: #59BDB6;
-  border: 2px solid #59BDB6;
+  color: #34db66;
+  border: 2px solid #34db66;
 }
 
 #hero .btn-get-started:hover {
-  background: #59BDB6;
+  background: #34db66;
   color: #fff;
 }
 
@@ -468,7 +455,7 @@ section {
   content: '';
   width: 50px;
   height: 3px;
-  background: #59BDB6;
+  background: #34db66;;
   display: inline-block;
 }
 
@@ -571,15 +558,15 @@ section {
   border-radius: 50px;
   transition: 0.3s;
   line-height: 1;
-  color: #59BDB6;
+  color: #3498db;
   -webkit-animation-delay: 0.8s;
   animation-delay: 0.8s;
   margin-top: 6px;
-  border: 2px solid #59BDB6;
+  border: 2px solid #3498db;
 }
 
 .about .content .btn-learn-more:hover {
-  background: #59BDB6;
+  background: #3498db;
   color: #fff;
   text-decoration: none;
 }
@@ -613,7 +600,7 @@ section {
 .counts .content .count-box i {
   display: block;
   font-size: 36px;
-  color: #59BDB6;
+  color: #3498db;
   float: left;
 }
 
@@ -691,7 +678,7 @@ section {
 }
 
 .services .icon-box:hover::before {
-  background: #59BDB6;
+  background: #34db66;
   right: 0;
   top: 0;
   width: 100%;
@@ -707,7 +694,7 @@ section {
   border-radius: 50%;
   width: 60px;
   height: 60px;
-  background: #59BDB6;
+  background: #34db66;
   transition: all 0.3s ease-in-out;
 }
 
@@ -742,7 +729,7 @@ section {
 }
 
 .services .icon-box:hover .icon i {
-  color: #59BDB6;
+  color: #34db66;
 }
 
 /*--------------------------------------------------------------
@@ -804,6 +791,44 @@ section {
 
 .more-services .card:hover .read-more a, .more-services .card:hover .card-title, .more-services .card:hover .card-title a, .more-services .card:hover .card-text {
   color: #fff;
+}
+
+/*--------------------------------------------------------------
+# Features
+--------------------------------------------------------------*/
+.features .icon-box {
+  display: flex;
+  align-items: center;
+  padding: 20px;
+  background: #f6f6f6;
+  transition: ease-in-out 0.3s;
+}
+
+.features .icon-box i {
+  font-size: 32px;
+  padding-right: 10px;
+  line-height: 1;
+}
+
+.features .icon-box h3 {
+  font-weight: 700;
+  margin: 0;
+  padding: 0;
+  line-height: 1;
+  font-size: 16px;
+}
+
+.features .icon-box h3 a {
+  color: #222222;
+  transition: ease-in-out 0.3s;
+}
+
+.features .icon-box h3 a:hover {
+  color: #3498db;
+}
+
+.features .icon-box:hover {
+  background: #eef7fc;
 }
 
 /*--------------------------------------------------------------
@@ -899,7 +924,127 @@ section {
   }
 }
 
+/*--------------------------------------------------------------
+# Portfolio
+--------------------------------------------------------------*/
+.portfolio .portfolio-item {
+  margin-bottom: 30px;
+}
 
+.portfolio #portfolio-flters {
+  padding: 0;
+  margin: 0 auto 20px auto;
+  list-style: none;
+  text-align: center;
+}
+
+.portfolio #portfolio-flters li {
+  cursor: pointer;
+  display: inline-block;
+  padding: 8px 15px 10px 15px;
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 1;
+  text-transform: uppercase;
+  color: #222222;
+  margin-bottom: 5px;
+  transition: all 0.3s ease-in-out;
+  border-radius: 3px;
+}
+
+.portfolio #portfolio-flters li:hover, .portfolio #portfolio-flters li.filter-active {
+  color: #fff;
+  background: #3498db;
+}
+
+.portfolio #portfolio-flters li:last-child {
+  margin-right: 0;
+}
+
+.portfolio .portfolio-wrap {
+  transition: 0.3s;
+  position: relative;
+  overflow: hidden;
+  z-index: 1;
+  background: rgba(34, 34, 34, 0.6);
+}
+
+.portfolio .portfolio-wrap::before {
+  content: "";
+  background: rgba(34, 34, 34, 0.6);
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  transition: all ease-in-out 0.3s;
+  z-index: 2;
+  opacity: 0;
+}
+
+.portfolio .portfolio-wrap img {
+  transition: all ease-in-out 0.3s;
+}
+
+.portfolio .portfolio-wrap .portfolio-info {
+  opacity: 0;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 3;
+  transition: all ease-in-out 0.3s;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: flex-start;
+  padding: 20px;
+}
+
+.portfolio .portfolio-wrap .portfolio-info h4 {
+  font-size: 20px;
+  color: #fff;
+  font-weight: 600;
+}
+
+.portfolio .portfolio-wrap .portfolio-info p {
+  color: rgba(255, 255, 255, 0.7);
+  font-size: 14px;
+  text-transform: uppercase;
+  padding: 0;
+  margin: 0;
+  font-style: italic;
+}
+
+.portfolio .portfolio-wrap .portfolio-links {
+  text-align: center;
+  z-index: 4;
+}
+
+.portfolio .portfolio-wrap .portfolio-links a {
+  color: #fff;
+  margin: 0 5px 0 0;
+  font-size: 28px;
+  display: inline-block;
+  transition: 0.3s;
+}
+
+.portfolio .portfolio-wrap .portfolio-links a:hover {
+  color: #3498db;
+}
+
+.portfolio .portfolio-wrap:hover::before {
+  opacity: 1;
+}
+
+.portfolio .portfolio-wrap:hover img {
+  transform: scale(1.2);
+}
+
+.portfolio .portfolio-wrap:hover .portfolio-info {
+  opacity: 1;
+}
 
 /*--------------------------------------------------------------
 # Pricing
@@ -925,7 +1070,7 @@ section {
 
 .pricing .box h4 {
   font-size: 42px;
-  color: #59BDB6;
+  color: #3498db;
   font-weight: 500;
   font-family: "Quicksand", sans-serif;
   margin-bottom: 20px;
@@ -957,7 +1102,7 @@ section {
 }
 
 .pricing .box ul i {
-  color: #59BDB6;
+  color: #3498db;
   font-size: 18px;
   padding-right: 4px;
 }
@@ -976,8 +1121,8 @@ section {
   display: inline-block;
   padding: 10px 40px 12px 40px;
   border-radius: 50px;
-  border: 2px solid #59BDB6;
-  color: #59BDB6;
+  border: 2px solid #3498db;
+  color: #3498db;
   font-size: 14px;
   font-weight: 400;
   font-family: "Raleway", sans-serif;
@@ -986,22 +1131,52 @@ section {
 }
 
 .pricing .box .btn-buy:hover {
-  background: #59BDB6;
+  background: #3498db;
   color: #fff;
 }
 
 .pricing .recommended {
-  border-color: #59BDB6;
+  border-color: #3498db;
 }
 
 .pricing .recommended .btn-buy {
-  background: #59BDB6;
+  background: #3498db;
   color: #fff;
 }
 
 .pricing .recommended .btn-buy:hover {
-  background: #59BDB6;
-  border-color: #59BDB6;
+  background: #2383c4;
+  border-color: #2383c4;
+}
+
+/*--------------------------------------------------------------
+# F.A.Q
+--------------------------------------------------------------*/
+.faq .faq-item {
+  margin: 20px 0;
+  padding: 20px 0;
+  border-bottom: 1px solid #eeeeee;
+}
+
+.faq .faq-item i {
+  color: #8bc4ea;
+  font-size: 24px;
+  float: left;
+  line-height: 0;
+  padding: 13px 0 0 0;
+  margin: 0;
+}
+
+.faq .faq-item h4 {
+  font-size: 16px;
+  line-height: 26px;
+  font-weight: 500;
+  margin: 0 0 10px 32px;
+  font-family: "Poppins", sans-serif;
+}
+
+.faq .faq-item p {
+  font-size: 15px;
 }
 
 /*--------------------------------------------------------------
@@ -1032,7 +1207,7 @@ section {
   font-size: 18px;
   display: inline-block;
   background: #fff;
-  color: #34db66;
+  color: #3498db;
   line-height: 1;
   padding: 8px 0;
   margin-right: 4px;
@@ -1041,11 +1216,11 @@ section {
   width: 36px;
   height: 36px;
   transition: 0.3s;
-  border: 1px solid #34db66;
+  border: 1px solid #3498db;
 }
 
 .contact .social-links a:hover {
-  background: #34db66;
+  background: #3498db;
   color: #fff;
 }
 
@@ -1055,7 +1230,7 @@ section {
 
 .contact .info i {
   font-size: 32px;
-  color: #34db66;
+  color: #3498db;
   float: left;
   line-height: 1;
 }
@@ -1119,7 +1294,7 @@ section {
 }
 
 .contact .php-email-form button[type="submit"] {
-  background: #34db66;
+  background: #3498db;
   border: 0;
   padding: 10px 24px;
   color: #fff;
@@ -1146,6 +1321,114 @@ section {
   }
   100% {
     transform: rotate(360deg);
+  }
+}
+
+/*--------------------------------------------------------------
+# Breadcrumbs
+--------------------------------------------------------------*/
+.breadcrumbs {
+  padding: 15px 0;
+  background: #f3f3f3;
+  min-height: 40px;
+  margin-top: 80px;
+}
+
+.breadcrumbs h2 {
+  font-size: 28px;
+  font-weight: 400;
+}
+
+.breadcrumbs ol {
+  display: flex;
+  flex-wrap: wrap;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.breadcrumbs ol li + li {
+  padding-left: 10px;
+}
+
+.breadcrumbs ol li + li::before {
+  display: inline-block;
+  padding-right: 10px;
+  color: #3c3c3c;
+  content: "/";
+}
+
+@media (max-width: 768px) {
+  .breadcrumbs .d-flex {
+    display: block !important;
+  }
+  .breadcrumbs ol {
+    display: block;
+  }
+  .breadcrumbs ol li {
+    display: inline-block;
+  }
+}
+
+/*--------------------------------------------------------------
+# Portfolio Details
+--------------------------------------------------------------*/
+.portfolio-details {
+  padding-top: 20px;
+}
+
+.portfolio-details .portfolio-title {
+  font-size: 26px;
+  font-weight: 700;
+  margin-bottom: 20px;
+}
+
+.portfolio-details .portfolio-details-carousel .owl-nav, .portfolio-details .portfolio-details-carousel .owl-dots {
+  margin-top: 5px;
+  text-align: center;
+}
+
+.portfolio-details .portfolio-details-carousel .owl-dot {
+  display: inline-block;
+  margin: 0 5px;
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background-color: #ddd !important;
+}
+
+.portfolio-details .portfolio-details-carousel .owl-dot.active {
+  background-color: #3498db !important;
+}
+
+.portfolio-details .portfolio-info {
+  padding-top: 45px;
+}
+
+.portfolio-details .portfolio-info h3 {
+  font-size: 22px;
+  font-weight: 400;
+  margin-bottom: 20px;
+}
+
+.portfolio-details .portfolio-info ul {
+  list-style: none;
+  padding: 0;
+  font-size: 15px;
+}
+
+.portfolio-details .portfolio-info ul li + li {
+  margin-top: 10px;
+}
+
+.portfolio-details .portfolio-info p {
+  font-size: 15px;
+  padding: 15px 0 0 0;
+}
+
+@media (max-width: 992px) {
+  .portfolio-details .portfolio-info {
+    padding-top: 20px;
   }
 }
 
