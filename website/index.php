@@ -898,6 +898,11 @@
   <!-- Template Main JS File -->
   <script src="assets/js/main.js"></script>
 
+  <form action="poll-creation.php" method="post">
+    <input type="submit" name="test" value="Test"/>
+  </form>
+  
+
 </body>
 
 </html>

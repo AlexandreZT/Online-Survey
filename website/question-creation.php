@@ -3,7 +3,12 @@
   $mysqli = mysqli_connect("127.0.0.1", "root", "", "2proj"); // connexion à la base de donnée
 ?>
 
-<meta charset="utf-8">
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+    </head>
+    <body>
 <form id="create_questions" action="question-creation.php" method="post">
     <label>
         <?php echo "Q";
@@ -33,27 +38,30 @@
 if (isset($_POST['create_questions'])) { //ok
     if(empty($_POST['obligatoire']))
     {
-        $obligatoire = 0;
+        $obligatoire = 0; // false
     }
     else {
-        $obligatoire = 1;
+        $obligatoire = 1; // true
     }	
     if ($_POST['type'] == "unique") {
-        $type = 0; // "unique"
-        //echo "unique";
+        $_SESSION['type'] = 0; // "unique"
     }
     else if ($_POST['type'] == "multiple") {
-        $type = 1;// "multiple"
-        //echo "multiple";
+        $_SESSION['type'] = 1; // "multiple"
     }
     else {
-        $type = 2; // "text"
-        //echo "text";
+        $_SESSION['type'] = 2; // "text"
     }
-    $req_questions = $mysqli->query("INSERT INTO questions (`poll`, `question`, `mandatory`,`type`) VALUES ($_SESSION[poll], '$_POST[question]', $obligatoire, $type)");
+
+    $req_questions = $mysqli->query("INSERT INTO questions (`poll`, `question`, `mandatory`,`type`) VALUES ($_SESSION[poll], '$_POST[question]', $obligatoire, $_SESSION[type])");
+
+    //$req_questions = $mysqli->query("INSERT INTO questions (`poll`, `question`, `mandatory`,`type`) VALUES (33, 'hacked', 1, 2");
 
     $_SESSION['qNumber']+=1;
     header('location: answers-creation.php');
 }
     
 ?>
+
+    <body>
+</html>

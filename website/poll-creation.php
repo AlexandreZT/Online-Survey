@@ -52,8 +52,7 @@
     }
     else {
         echo "connexion requise";
-    }
+	}
 	?>
-
   </body>
 </html>

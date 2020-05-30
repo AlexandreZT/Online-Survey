@@ -2,26 +2,73 @@
   session_start(); // Démarre une nouvelle session ou reprend une session existante
   $mysqli = mysqli_connect("127.0.0.1", "root", "", "2proj"); // connexion à la base de donnée
 ?>
-<meta charset="utf-8">
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+    </head>
+    <body>
+
+<?php
+	if ($_SESSION['type'] == 2) { // si c'est une réponse libre (texte)
+		?>
+		<form id="text-answers-creation" action="answers-creation.php" method="post">
+		<textarea disabled style="resize: none" name="message" cols="40" rows="5" placeholder="Réponse libre de vos clients"></textarea>
+		<br>
+        <!-- si la réponse était du text alors on termine direction le questionnaire sinon on créer le choix de réponse -->
+        <input type="submit" name="next" value="Question suivante">
+        <!-- $qNumber++; -->
+        <input type="submit" name="end" value="Terminer">
+		</form>
+		<?php
+	} else { // si c'est une réponse au choix (unique ou multiple)
+		$i = 1; // compteur
+
+		if(!isset($_SESSION['choiceNumber'])) {
+			$_SESSION['choiceNumber'] = 3; // nb de réponse par défaut
+		}  
+
+		while ($i <= $_SESSION['choiceNumber']) {
+?>
+
 <form id="answers-creation" action="answers-creation.php" method="post">
 		<!-- Choix de réponse -->
 		<label>• </label>
 		<input type="text" name="add_answer" size="50" maxlength="100" placeholder="Saisissez un choix de réponse" value="" />
-        <input type="submit" name="Add_anwser" value="+" /> <!-- onclick="moreQuestion()" -->
-		<input type="submit" name="Del_answer" value="x" /> <!-- onclick="deleteQuestion()" -->
-		<br>
-		<label>• </label>
-		<input type="text" name="add_answer" size="50" maxlength="100" placeholder="Saisissez un choix de réponse" value="" />
-        <input type="submit" name="Add_anwser" value="+" />
-        <input type="submit" name="Del_answer" value="x" />
-        <br> <br>
-        <!-- si la réponse était du text alors on termine direction le questionnaire sinon on créer le choix de réponse -->
+        <input type="submit" name="Add" value="+<?php $i?>" />
+		<input type="submit" name="Del" value="x<?php $i?>" />
+        <br> <br> 
+<?php 
+		$i++;
+		}
+		?>
+		<!-- si la réponse était du text alors on termine direction le questionnaire sinon on créer le choix de réponse -->
         <input type="submit" name="next" value="Question suivante">
         <!-- $qNumber++; -->
         <input type="submit" name="end" value="Terminer">
 </form>
 
+		<?php
+	}
+?>
+
+
 <?php
+	if (isset($_POST["Add"])) {
+		if($_SESSION['choiceNumber'] <= 4) { // nb max de question (5)
+			$_SESSION['choiceNumber']++;
+		}
+		header('location: answers-creation.php');
+	}
+
+	if (isset($_POST["Del"])) { //  && ($_POST["Del"]) == "x 1 "
+		if($_SESSION['choiceNumber'] > 2) { // nb min de réponse (2)
+			$_SESSION['choiceNumber']--;
+		}
+		header('location: answers-creation.php');
+	}
+
 	if (isset($_POST['next']) || isset($_POST['end'])){ // ok 
 		// echo "requete";
 	}
@@ -35,21 +82,7 @@
     }
 ?>
 
-<script>
-		var qNumber = 3; 
-		function moreQuestion() {
-	  		// document.getElementById("answers-creation").style.color = "red";
-			if(qNumber <= 4) { // nb max de question (5)
-				qNumber++;
-			}
-            console.log(qNumber);
-		}	
-
-		function deleteQuestion() {
-  			//document.getElementById("demo2").style.color = "blue";
-			if(qNumber > 2) { // nb min de réponse (2)
-				qNumber--;
-			}
-            console.log(qNumber);
-		}
 </script>
+	
+	<body>
+</html>
