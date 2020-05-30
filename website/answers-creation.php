@@ -35,9 +35,9 @@
 <form id="answers-creation" action="answers-creation.php" method="post">
 		<!-- Choix de réponse -->
 		<label>• </label>
-		<input type="text" name="add_answer" size="50" maxlength="100" placeholder="Saisissez un choix de réponse" value="" />
-        <input type="submit" name="Add" value="+<?php $i?>" />
-		<input type="submit" name="Del" value="x<?php $i?>" />
+		<input type="text" name="answer<?php echo "$i"?>" size="50" maxlength="100" placeholder="Saisissez un choix de réponse" value="" />
+        <input type="submit" name="Add" value="+" />
+		<input type="submit" name="Del" value="x" />
         <br> <br> 
 <?php 
 		$i++;
@@ -69,8 +69,21 @@
 		header('location: answers-creation.php');
 	}
 
-	if (isset($_POST['next']) || isset($_POST['end'])){ // ok 
-		// echo "requete";
+	if ((isset($_POST['next']) || isset($_POST['end'])) && $_SESSION['type'] != 2){ // On envoie les requetes de choix de réponses si ce n'est pas une réponse libre
+		
+		$req_answers = $mysqli->query("INSERT INTO answers (`choice`, `answer`) VALUES ($_SESSION[choice], '$_POST[answer1]')");
+		$req_answers = $mysqli->query("INSERT INTO answers (`choice`, `answer`) VALUES ($_SESSION[choice], '$_POST[answer2]')");
+	
+		if ($_SESSION['choiceNumber'] >= 3)  {
+			$req_answers = $mysqli->query("INSERT INTO answers (`choice`, `answer`) VALUES ($_SESSION[choice], '$_POST[answer3]')");
+		}
+		if ($_SESSION['choiceNumber'] >= 4)  {
+			$req_answers = $mysqli->query("INSERT INTO answers (`choice`, `answer`) VALUES ($_SESSION[choice], '$_POST[answer4]')");
+		}
+		if ($_SESSION['choiceNumber'] >= 5)  {
+			$req_answers = $mysqli->query("INSERT INTO answers (`choice`, `answer`) VALUES ($_SESSION[choice], '$_POST[answer5]')");
+		}
+		//echo "requete";
 	}
     if (isset($_POST['next'])){ // ok
         header('location: question-creation.php');

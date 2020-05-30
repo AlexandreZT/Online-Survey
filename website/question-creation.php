@@ -55,6 +55,16 @@ if (isset($_POST['create_questions'])) { //ok
 
     $req_questions = $mysqli->query("INSERT INTO questions (`poll`, `question`, `mandatory`,`type`) VALUES ($_SESSION[poll], '$_POST[question]', $obligatoire, $_SESSION[type])");
 
+
+    $req_max = $mysqli->query("SELECT MAX(id) FROM `questions` WHERE `poll` = '$_SESSION[poll]'");
+	$row = mysqli_fetch_array($req_max);
+    $_SESSION['max'] = $row['MAX(id)']; // Je récupère l'id max
+    
+    // récupère l'id de la question
+	$req_id = $mysqli->query("SELECT id FROM questions WHERE `id` = '$_SESSION[max]'"); // récup le dernier sondage créé
+	$row = mysqli_fetch_array($req_id); // sous forme de tableau
+	$_SESSION['choice'] = $row['id']; // Je récupère l'id pour la clé étrangère
+
     //$req_questions = $mysqli->query("INSERT INTO questions (`poll`, `question`, `mandatory`,`type`) VALUES (33, 'hacked', 1, 2");
 
     $_SESSION['qNumber']+=1;
