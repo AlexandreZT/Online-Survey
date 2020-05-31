@@ -219,12 +219,16 @@
                             $req_user_surv = $mysqli->query("SELECT * FROM surveys WHERE `owner` = $_SESSION[id]");
                             $req_user_surv->data_seek(0); // sous forme de tableau pour recup les données par colonnes
                             while ($row = $req_user_surv->fetch_assoc()) {
-                                if ($row['title'] == "")
+                                if ($row['title'] == "") // si le sondage n'a pas de nom
                                 {
-                                    $row['title'] = "sans nom";
+                                    $row['title'] = "sans nom"; // alors je le nomme "sans nom"
                                 }
-                                echo "<a href='#'>• $row[title]</a><br>";
+                                $surv_id = array(); // je créer un tableau qui récupère tout nos id de sondage
+                                array_push($surv_id, $row['id']); // à chaque itération je mets les id à la fin du tableau
+                                // print_r(array_values($surv_id)); // fonctionne correctement
+                                echo "<a href='#'>• $row[title], id : $row[id]</a><br>";
                             }
+                            
                             // Affichage des questions de chaque sondages :
                             // $req_user_quest = $mysqli->query("SELECT * FROM questions WHERE membre=$_SESSION[id] and questions='$row[poll]'");
                             // $req_user_quest->data_seek(0);
