@@ -213,6 +213,25 @@
                                 </div>
                                 </div>
                         </div>
+
+                        <?php
+                        if (isset($_SESSION['pseudo'])) { // si quelqu'un est connecté
+                            $req_user_surv = $mysqli->query("SELECT * FROM surveys WHERE `owner` = $_SESSION[id]");
+                            $req_user_surv->data_seek(0); // sous forme de tableau pour recup les données par colonnes
+                            while ($row = $req_user_surv->fetch_assoc()) {
+                                if ($row['title'] == "")
+                                {
+                                    $row['title'] = "sans nom";
+                                }
+                                echo "<a href='#'>• $row[title]</a><br>";
+                            }
+                            // Affichage des questions de chaque sondages :
+                            // $req_user_quest = $mysqli->query("SELECT * FROM questions WHERE membre=$_SESSION[id] and questions='$row[poll]'");
+                            // $req_user_quest->data_seek(0);
+                        } else {
+                            echo "Vous devez vous connecter pour afficher vos sondages";
+                        }
+                        ?>
                     </div>
                 </div>
         </div>
