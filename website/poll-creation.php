@@ -42,7 +42,6 @@
 </head>
 
 <body>
-
 	<!-- ======= Header ======= -->
 	<header id="header" class="fixed-top d-flex align-items-center">
 	    <div class="container d-flex align-items-center">
@@ -92,7 +91,7 @@
 			<label><b>Donner un titre à votre sondage :</b></label>
 			<br>
     	    <input type="text" name="create_surveys" size="50" maxlength="100" placeholder="Saisissez un titre de sondage" value="">
-			<input type="submit" name="Create_Surveys" value="Créer"> <!-- onclick="redirect()" -->
+			<input type="submit" name="Create_Surveys" value="Suivant"> <!-- onclick="redirect()" -->
 		</form>
 	</div>
 

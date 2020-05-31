@@ -48,14 +48,11 @@
     <div class="container d-flex align-items-center">
 
       <div class="logo mr-auto">
-        <!--<h1 class="text-light"><a href="index.html"><span>Vesperr</span></a></h1>-->
-        <!-- Uncomment below if you prefer to use an image logo -->
         <a href="index.php"><img src="assets/img/banner.png" alt="" class="img-fluid"></a>
       </div>
 
       <nav class="nav-menu d-none d-lg-block">
         <ul>
-          <!--<li class="active"><a href="#header">Accueil</a></li>-->
           <li><a href="#about">Plus d'Infos</a></li>
           <li><a href="#pricing">Tarification & Abonnements</a></li>
           <li><a href="poll-creation.php">Questionnaire</a></li>

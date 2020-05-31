@@ -42,30 +42,72 @@
 </head>
 
 <body>
-    <form id="create_questions" action="question-creation.php" method="post">
-        <label>
-            <?php echo "Q";
-                if(!isset($_SESSION['qNumber'])){
-                    $_SESSION['qNumber'] = 1;   
-                }
-                echo"$_SESSION[qNumber]";
-            ?>
-        </label> <!-- $qNumber-->
-        <input type="text" name="question" size="50" maxlength="100" placeholder="Saisissez votre question">
-        <!-- choix type de réponse -->
-        <select name="type" size="1" > <!-- onchange="this.form.submit()" -->
-            <!--<option value="none">type de réponse</option> no value -->
-            <option value="unique">Choix unique</option>
-            <option value="multiple">Choix multiple</option>
-            <option value="text">Zone de text</option>
-        </select>
-        <!-- option de réponse obligatoire (if empty alors invalide) -->
-        <label>obligatoire</label>
-        <input type="checkbox" name="obligatoire" value="TRUE">
-        <br>
-        <input type="submit" name="create_questions" value="Passer aux réponses">
+    <!-- ======= Header ======= -->
+	<header id="header" class="fixed-top d-flex align-items-center">
+	    <div class="container d-flex align-items-center">
 
-    </form>
+	      <div class="logo mr-auto">
+	        <!--<h1 class="text-light"><a href="index.html"><span>Vesperr</span></a></h1>-->
+	        <!-- Uncomment below if you prefer to use an image logo -->
+	        <a href="index.php"><img src="assets/img/banner.png" alt="" class="img-fluid"></a>
+	      </div>
+
+	      <nav class="nav-menu d-none d-lg-block">
+	        <ul>
+	          <!--<li class="active"><a href="#header">Accueil</a></li>-->
+	          <li><a href="#about">Plus d'Infos</a></li>
+	          <li><a href="#pricing">Tarification & Abonnements</a></li>
+	          <li><a href="poll-creation.php">Questionnaire</a></li>
+	
+	          <?php
+	              if(isset($_SESSION['pseudo'])) {
+	            ?> 
+	            <li class="get-started"><a href="logout.php">Déconnexion</a></li>
+	            <!-- <li class="get-started"><a href="login.php">Connexion</a></li> -->
+	            <?php
+	              }
+	              else {
+	            ?>
+	            <li class="get-started"><a href="login.php">Connexion</a></li>
+	            <!-- <li><a href="logout.php">Déconnexion</a></li> -->
+	            <?php
+	          }
+	          ?>
+	        </ul>
+	      </nav>
+	      <!-- .nav-menu -->
+
+	    </div>
+  </header>
+  <!-- End Header -->
+
+    <div id="form">
+        <form id="create_questions" action="question-creation.php" method="post">
+        <label><b>Saisissez votre question :</b></label>
+            <label>
+                <?php echo "Q";
+                    if(!isset($_SESSION['qNumber'])){
+                        $_SESSION['qNumber'] = 1;   
+                    }
+                    echo"$_SESSION[qNumber]";
+                ?>
+            </label> <!-- $qNumber-->
+            <input type="text" name="question" size="50" maxlength="100" placeholder="Saisissez votre question">
+            <!-- choix type de réponse -->
+            <select name="type" size="1" > <!-- onchange="this.form.submit()" -->
+                <!--<option value="none">type de réponse</option> no value -->
+                <option value="unique">Choix unique</option>
+                <option value="multiple">Choix multiple</option>
+                <option value="text">Zone de text</option>
+            </select>
+            <!-- option de réponse obligatoire (if empty alors invalide) -->
+            <label>obligatoire</label>
+            <input type="checkbox" name="obligatoire" value="TRUE">
+            <br>
+            <input type="submit" name="create_questions" value="Passer aux réponses">
+
+        </form>
+    </div>
 
     <?php
     if (isset($_POST['create_questions'])) { //ok

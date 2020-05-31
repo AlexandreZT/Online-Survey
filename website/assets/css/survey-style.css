@@ -26,14 +26,24 @@ body {
   }
   
 #form{
+  letter-spacing: 1px;
+  display: block;
+  text-align: center;
+  margin-top: 200px;
+  padding: 10px 30px;
+}
 
-    letter-spacing: 1px;
-    display: block;
-    text-align: center;
-    margin-top: 200px;
-    padding: 10px 30px;
+input[type=text] {
+  text-align: center;
+  border: 2px #59BDB6;
+  border-radius: 30px;
+}
 
-
+input[type=submit] {
+  border: 2px solid #59BDB6;
+  color: white;
+  background-color: #59BDB6;
+  border-radius: 50px;
 }
   
   /*--------------------------------------------------------------
