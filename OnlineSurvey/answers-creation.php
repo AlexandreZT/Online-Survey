@@ -130,14 +130,22 @@
 		if($_SESSION['choiceNumber'] <= 4) { // nb max de question (5)
 			$_SESSION['choiceNumber']++;
 		}
-		header('location: answers-creation.php');
+		?>
+			<script type="text/javascript">
+				window.location.href = 'answers-creation.php';
+			</script>
+		<?php
 	}
 
 	if (isset($_POST["Del"])) { //  && ($_POST["Del"]) == "x 1 "
 		if($_SESSION['choiceNumber'] > 2) { // nb min de réponse (2)
 			$_SESSION['choiceNumber']--;
 		}
-		header('location: answers-creation.php');
+		?>
+			<script type="text/javascript">
+				window.location.href = 'answers-creation.php';
+			</script>
+		<?php
 	}
 
 	if ((isset($_POST['next']) || isset($_POST['end'])) && $_SESSION['type'] != 2){ // On envoie les requetes de choix de réponses si ce n'est pas une réponse libre
