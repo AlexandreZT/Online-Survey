@@ -46,38 +46,18 @@ session_start();
   <header id="header" class="fixed-top d-flex align-items-center">
     <div class="container d-flex align-items-center">
 
-      <div class="logo mr-auto">
+    <div class="logo mr-auto">
         <!--<h1 class="text-light"><a href="index.php"><span>Vesperr</span></a></h1>-->
         <!-- Uncomment below if you prefer to use an image logo -->
-        <a href="index.php"><img src="assets/img/logo.png" alt="" class="img-fluid"></a>
+        <a href="index.php"><img src="assets/img/banner.png" alt="" class="img-fluid"></a>
       </div>
 
       <nav class="nav-menu d-none d-lg-block">
         <ul>
-          <li class="active"><a href="index.php">Accueil</a></li>
-          <li><a href="#about">Nous concernant</a></li>
-          <li><a href="#services">Services</a></li>
-          <li><a href="#portfolio">Exemples</a></li>
-          <li><a href="#pricing">Abonnements</a></li>
-          <!--<li class="drop-down"><a href="">Drop Down</a>
-            <ul>
-              <li><a href="#">Drop Down 1</a></li>
-              <li class="drop-down"><a href="#">Drop Down 2</a>
-                <ul>
-                  <li><a href="#">Deep Drop Down 1</a></li>
-                  <li><a href="#">Deep Drop Down 2</a></li>
-                  <li><a href="#">Deep Drop Down 3</a></li>
-                  <li><a href="#">Deep Drop Down 4</a></li>
-                  <li><a href="#">Deep Drop Down 5</a></li>
-                </ul>
-              </li>
-              <li><a href="#">Drop Down 3</a></li>
-              <li><a href="#">Drop Down 4</a></li>
-              <li><a href="#">Drop Down 5</a></li>
-            </ul>
-          </li>
-          <li><a href="#contact">Contact</a></li>-->
-
+        <li><a href="#about">Plus d'Infos</a></li>
+          <li><a href="#pricing">Tarification & Abonnements</a></li>
+          <li><a href="dashboard.php">Tableau de bord</a></li>
+   
           <?php
               if(isset($_SESSION['pseudo'])) {
             ?> 
@@ -167,34 +147,17 @@ name="nom de l'input" sert à le reconnaitre une fois le bouton submit cliqué, 
 -->
     <div id="container">
         <form class="login" action="signin.php" method="post"> <!-- nom de class prete à confusion -->
-            <h2>Sign In</h2>
-            <label><b>Username</b></label>
-            <input type="text" name="pseudo" placeholder="Enter your username here" value="" />
-            <label><b>Password</b></label>
-            <input type="password" name="mdp" placeholder="Enter your password here" value="" />
-            <label><b>E-Mail</b></label>
-            <input type="text" name="mail" placeholder="Enter a valide e-mail here" value="" />
-            <a id="already" href="login.php"><p style="text-align:center">Already an account ?</p></a>
-            <input type="submit" name="connexion" value="Sign In" />
+            <h2>Rejoignez-nous !</h2>
+            <label><b>Nom d'Utilisateur</b></label>
+            <input type="text" name="pseudo" placeholder="Veuillez saisir un nom d'utilisateur" value="" />
+            <label><b>Mot de Passe</b></label>
+            <input type="password" name="mdp" placeholder="Veuillez saisir un mot de passe" value="" />
+            <label><b>Adresse Mail</b></label>
+            <input type="text" name="mail" placeholder="Veuillez saisir une adresse mail" value="" />
+            <a id="already" href="login.php"><p style="text-align:center">Déja inscrit ?</p></a>
+            <input type="submit" name="connexion" value="Je m'inscris" />
         </form>
     </div>
 <?php
 }
 ?>
-
-  <div id="panel">
-    <div id="panel-admin">
-        <div class="panel-admin-box">
-            <div id="tootlbar_colors">
-                <button class="color" style="background-color:#1abac8;" onclick="mytheme(0)"></button>
-                <button class="color" style="background-color:#ff8a00;" onclick="mytheme(1)"> </button>
-                <button class="color" style="background-color:#b4de50;" onclick="mytheme(2)"> </button>
-                <button class="color" style="background-color:#e54e53;" onclick="mytheme(3)"> </button>
-                <button class="color" style="background-color:#1abc9c;" onclick="mytheme(4)"> </button>
-                <button class="color" style="background-color:#159eee;" onclick="mytheme(5)"> </button>
-            </div>
-        </div>
-
-    </div>
-    <a class="open" href="#"><span><i class="fa fa-gear fa-spin"></i></span></a>
-</div>

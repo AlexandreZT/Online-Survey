@@ -82,7 +82,7 @@ if (isset($_POST['connexion'])) { // si le bouton "Connexion" est appuyé
         <ul>
         <li><a href="#about">Plus d'Infos</a></li>
           <li><a href="#pricing">Tarification & Abonnements</a></li>
-          <li><a href="poll-creation.php">Questionnaire</a></li>
+          <li><a href="dashboard.php">Tableau de bord</a></li>
 
           <?php
               if(isset($_SESSION['pseudo'])) {
@@ -115,9 +115,9 @@ if (isset($_POST['connexion'])) { // si le bouton "Connexion" est appuyé
         <input type="text" name="pseudo" placeholder="Veuillez saisir votre nom d'utilisateur" value="" />
         <label><b>Mot de Passe</b></label>
         <input type="password" name="mdp" placeholder="Veuillez saisir votre mot de passe" value="" />
-        <a href="registration.php"></a>
+        <a id="already"  href="registration.php"> <p style="text-align:center">Pas encore inscrit ?</p></a> 
 
-        <input type="submit" name="connexion" value="Log In" />
+        <input type="submit" name="connexion" value="Je me connecte" />
         
     </form>
 </div>

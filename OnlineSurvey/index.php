@@ -58,7 +58,7 @@
           <!--<li class="active"><a href="#header">Accueil</a></li>-->
           <li><a href="#about">Plus d'Infos</a></li>
           <li><a href="#pricing">Tarification & Abonnements</a></li>
-          <li><a href="poll-creation.php">Questionnaire</a></li>
+          <li><a href="dashboard.php">Tableau de bord</a></li>
           
           <?php
               if(isset($_SESSION['pseudo'])) {

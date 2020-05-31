@@ -31,3 +31,14 @@ id INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
 choice INT NOT NULL,
 answer VARCHAR(255) NOT NULL,
 FOREIGN KEY(choice) REFERENCES questions(id));
+
+CREATE TABLE resume (
+creator INT NOT NULL,
+survey INT NOT NULL,
+question INT NOT NULL,
+answer INT NOT NULL,
+FOREIGN KEY(creator) REFERENCES members(id));
+FOREIGN KEY(survey) REFERENCES surveys(id));
+FOREIGN KEY(question) REFERENCES questions(id));
+FOREIGN KEY(answer) REFERENCES answers(id));
+);
