@@ -164,13 +164,21 @@
 		}
 		//echo "requete";
 	}
-    if (isset($_POST['next'])){ // ok
-        header('location: question-creation.php');
+	if (isset($_POST['next'])){ // ok
+		?>
+			<script type="text/javascript">
+				window.location.href = 'question-creation.php';
+			</script>
+		<?php
     }
 
 	if (isset($_POST['end'])){ //ok
 		$_SESSION['qNumber'] = 1;
-		header('location: display.php');
+		?>
+			<script type="text/javascript">
+				window.location.href = 'display.php';
+			</script>
+		<?php
     }
 ?>
 
