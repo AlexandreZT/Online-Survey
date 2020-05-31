@@ -4,7 +4,7 @@
 body {
   font-family: "Quicksand", sans-serif;
   /*color: #444444;*/
-  background-color: #ffffff;
+  background-color: rgba(89, 189, 182, 0.5);
 }
 
 span {
@@ -356,7 +356,7 @@ form {
 p{
   font-family: "Poppins", sans-serif;
   font-style: 36px;
-  color: #59BDB6;
+  color: white;
   top:20%;
   position: relative;
   text-align: center;
