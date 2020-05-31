@@ -31,7 +31,7 @@
   <link href="assets/vendor/aos/aos.css" rel="stylesheet">
 
   <!-- Template Main CSS File -->
-  <link href="assets/css/survey-style.css" rel="stylesheet">
+  <link href="assets/css/answer-style.css" rel="stylesheet">
 
   <!-- =======================================================
   * Template Name: Vesperr - v2.0.0
