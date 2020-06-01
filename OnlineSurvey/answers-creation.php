@@ -176,7 +176,7 @@
 		$_SESSION['qNumber'] = 1;
 		?>
 			<script type="text/javascript">
-				window.location.href = 'display.php';
+				window.location.href = 'dashboard.php';
 			</script>
 		<?php
     }

@@ -2,6 +2,38 @@
   session_start(); // Démarre une nouvelle session ou reprend une session existante
   $mysqli = mysqli_connect("127.0.0.1", "root", "", "2proj"); // connexion à la base de donnée
 ?>
+<!-- Ce fichier permet à un membre de Online Survey de répondre au questionnaire d'une personne -->
+
+<?php
+	/*																										 
+	//Affichage des réponses de chaque questions de chaque sondage
+    if ($row['type'] == 2) { // si c'est une réponse textuelle
+		if ($row['mandatory'] == 1 && (empty($reponse))) { // si c'est obligatoire (TRUE) et qu'il n'a pas répondu
+				echo "réponse obligatoire";	
+		}
+		else {
+			// requete d'affichage
+		}
+	}
+	else if ($row['type'] == 1) { // si c'est une réponse multiple
+		if ($row['mandatory'] == 1 && (empty($reponse))) { // si c'est obligatoire (TRUE) et qu'il n'a pas répondu
+			echo "réponse obligatoire";	
+		}
+		else {
+			// requete d'affichage
+		}
+	}
+	else { // ($row['type'] == 0) si c'est une réponse unique
+		if ($row['mandatory'] == 1 && (empty($reponse))) { // si c'est obligatoire (TRUE) et qu'il n'a pas répondu
+			echo "réponse obligatoire";	
+		}
+		else {
+			// requete d'affichage
+		}
+	}
+	*/
+																												*
+?>
 <meta charset="utf-8">
 <p>Exemple de rendu d'affichage sur le tableau de bord: ce n'est pas un sondage réel</p> <!-- votre sondage : id = $id, sondage 1 -->
 <!-- zone de text -->

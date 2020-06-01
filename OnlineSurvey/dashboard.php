@@ -215,23 +215,33 @@
                         </div>
 
                         <?php
+                        $surv_id = array();
                         if (isset($_SESSION['pseudo'])) { // si quelqu'un est connecté
                             $req_user_surv = $mysqli->query("SELECT * FROM surveys WHERE `owner` = $_SESSION[id]");
                             $req_user_surv->data_seek(0); // sous forme de tableau pour recup les données par colonnes
                             while ($row = $req_user_surv->fetch_assoc()) {
-                                if ($row['title'] == "") // si le sondage n'a pas de nom
+                                if ($row['title'] == "") // si le sondage n'a pas été nommé
                                 {
-                                    $row['title'] = "sans nom"; // alors je le nomme "sans nom"
+                                    $row['title'] = "sondage sans nom"; // alors je le nomme "sans nom"
                                 }
-                                $surv_id = array(); // je créer un tableau qui récupère tout nos id de sondage
+                                 // je créer un tableau qui récupère tout nos id de sondage
                                 array_push($surv_id, $row['id']); // à chaque itération je mets les id à la fin du tableau
                                 // print_r(array_values($surv_id)); // fonctionne correctement
                                 echo "<a href='#'>• $row[title], id : $row[id]</a><br>";
+                                foreach($surv_id as $item) { // pour chaque id des sondages
+                                    // Affichage des questions de chaque sondages :
+                                    $req_user_quest = $mysqli->query("SELECT * FROM questions WHERE `poll`=$item");
+                                    $req_user_quest->data_seek(0);
+                                    while ($row = $req_user_quest->fetch_assoc()) {
+                                        if ($row['question'] == "") // si la question n'a pas été nommé
+                                        {
+                                            $row['question'] = "question sans nom"; // alors je la nomme "sans nom"
+                                        }
+                                    echo "<p>$row[question]</p>";
+                                    }
+                                }
                             }
                             
-                            // Affichage des questions de chaque sondages :
-                            // $req_user_quest = $mysqli->query("SELECT * FROM questions WHERE membre=$_SESSION[id] and questions='$row[poll]'");
-                            // $req_user_quest->data_seek(0);
                         } else {
                             echo "Vous devez vous connecter pour afficher vos sondages";
                         }
