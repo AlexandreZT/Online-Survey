@@ -162,7 +162,11 @@
 		if ($_SESSION['choiceNumber'] >= 5)  {
 			$req_answers = $mysqli->query("INSERT INTO answers (`choice`, `answer`) VALUES ($_SESSION[choice], '$_POST[answer5]')");
 		}
-		//echo "requete";
+	}
+
+	if ((isset($_POST['next']) || isset($_POST['end'])) && $_SESSION['type'] == 2){ // si c'est une réponse libre, on laisse quand même une allocation réponse par dafaut
+		$req_answers = $mysqli->query("INSERT INTO answers (`choice`, `answer`) VALUES ($_SESSION[choice], 'réponse libre')");
+
 	}
 	if (isset($_POST['next'])){ // ok
 		?>

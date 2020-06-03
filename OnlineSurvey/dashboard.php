@@ -246,9 +246,6 @@
                                         $req_user_answ = $mysqli->query("SELECT * FROM answers WHERE `choice`=$quest");
                                         $req_user_answ->data_seek(0);
                                         while ($row = $req_user_answ->fetch_assoc()){
-                                            // if ($row['type'] == 2) { // ceci est dans la table 'questions'
-                                            //    $row['answer'] == "réponse libre";
-                                            //}
                                             echo "<p>$row[answer], id : $row[id]</p>";
                                         }                    
                                     } 
