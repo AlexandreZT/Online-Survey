@@ -188,7 +188,13 @@
                                         </i>Forms Validation
                                     </a>
                                 </li>
-                                
+                                <li>
+                                <a href="surveys.php" target="_blank">
+                                        <i class="metismenu-icon pe-7s-graph2">
+                                        </i>
+                                        Répondre à un questionnaire
+                                    </a>
+                                </li>
                                 <li class="app-sidebar__heading">PRO Version</li>
                                 <li>
                                     <a href="https://dashboardpack.com/theme-details/architectui-dashboard-html-pro/" target="_blank">
@@ -225,33 +231,33 @@
                                 {
                                     $row['title'] = "sondage sans nom"; // alors je le nomme "sans nom"
                                 }
-                            array_push($surv_id, $row['id']); // à chaque itération je mets les id à la fin du tableau
-                            // print_r(array_values($surv_id)); // fonctionne correctement
-                            echo "<h2 style='text-decoration: underline;'>$row[title]</h2>";
+                                array_push($surv_id, $row['id']); // à chaque itération je mets les id à la fin du tableau
+                                // print_r(array_values($surv_id)); // fonctionne correctement
+                                echo "<h2 style='text-decoration: underline;'>$row[title] - id : $row[id]</h2>";
 
-                            // Affichage des questions de chaque sondages :
-                            foreach($surv_id as $surv) { // pour chaque id des sondages
-                                $req_user_quest = $mysqli->query("SELECT * FROM questions WHERE `poll`=$surv");
-                                $req_user_quest->data_seek(0);
-                                while ($row = $req_user_quest->fetch_assoc()) {
-                                    $quest_id = array(); // je créer un tableau qui récupère tout nos id des questions / également se réinitialise
-                                    if ($row['question'] == "") // si la question n'a pas été nommé
-                                    {
-                                        $row['question'] = "question sans nom"; // alors je la nomme "sans nom"
-                                    }
-                                    array_push($quest_id, $row['id']); // à chaque itération je mets les id à la fin du tableau
-                                    echo "<h5>$row[question]</h5>";
+                                // Affichage des questions de chaque sondages :
+                                foreach($surv_id as $surv) { // pour chaque id des sondages
+                                    $req_user_quest = $mysqli->query("SELECT * FROM questions WHERE `poll`=$surv");
+                                    $req_user_quest->data_seek(0);
+                                    while ($row = $req_user_quest->fetch_assoc()) {
+                                        $quest_id = array(); // je créer un tableau qui récupère tout nos id des questions / également se réinitialise
+                                        if ($row['question'] == "") // si la question n'a pas été nommé
+                                        {
+                                            $row['question'] = "question sans nom"; // alors je la nomme "sans nom"
+                                        }
+                                        array_push($quest_id, $row['id']); // à chaque itération je mets les id à la fin du tableau
+                                        echo "<h5>$row[question]</h5>";
                                     
-                                    foreach($quest_id as $quest) { // pour chaque id des questions
-                                        $req_user_answ = $mysqli->query("SELECT * FROM answers WHERE `choice`=$quest");
-                                        $req_user_answ->data_seek(0);
-                                        while ($row = $req_user_answ->fetch_assoc()){
-                                            echo "<p>- $row[answer]</p>";
-                                        }                    
-                                    } 
-                                }
-                            }  
-                        }
+                                        foreach($quest_id as $quest) { // pour chaque id des questions
+                                            $req_user_answ = $mysqli->query("SELECT * FROM answers WHERE `choice`=$quest");
+                                            $req_user_answ->data_seek(0);
+                                            while ($row = $req_user_answ->fetch_assoc()){
+                                                echo "<p>- $row[answer]</p>";
+                                            }                    
+                                        } 
+                                    }
+                                }  
+                            }
                         /*
                         echo "les id des questions : ";
                         foreach($quest_id as $quest) {
@@ -260,7 +266,7 @@
                         echo "<br> le nombre d'id cumulée : ";
                         echo count($quest_id);
                         */
-                     } else {
+                        } else {
                             echo "Vous devez vous connecter pour afficher vos sondages";
                         }
                         ?>
