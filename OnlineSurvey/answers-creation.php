@@ -168,7 +168,8 @@
 		$req_answers = $mysqli->query("INSERT INTO answers (`choice`, `answer`) VALUES ($_SESSION[choice], 'réponse libre')");
 
 	}
-	if (isset($_POST['next'])){ // ok
+
+	if (isset($_POST['next'])){
 		?>
 			<script type="text/javascript">
 				window.location.href = 'question-creation.php';
