@@ -94,9 +94,9 @@ if (!isset($_SESSION['pseudo'])) {
 		$qCount = 1;
 		$aCount = 1;
 		// echo "$_SESSION[qNum]"; // nb de boucle à traité par question
-		while ($qCount < $_SESSION['qNum']) {
+		while ($qCount <= $_SESSION['qNum']) {
 			if (isset($_POST["unique$qCount"])){
-				while ($aCount < 5) { // nb max de reponse par question
+				while ($aCount <= 5) { // nb max de reponse par question
 					if($_POST["unique$qCount"] == $aCount) // selection reponse 1
 					{
 						echo "unique$qCount$aCount"; // requete owner_id / poll_id qCount / aCount
@@ -104,20 +104,26 @@ if (!isset($_SESSION['pseudo'])) {
 					$aCount++;			
 				}
 				$aCount = 1; // init
-
-			}		
+			}	
+			// debut par un while
+			while ($aCount < 5) { // nb max de reponse par question
+				if (isset($_POST["multiple$qCount$aCount"])){
+					echo "multiple$qCount$aCount";
+				}
+				$aCount++;
+			}
+			$aCount = 1; // init
+/*
 			if (isset($_POST["multiple$qCount$aCount"])){
 				while ($aCount < 5) { // nb max de reponse par question
-					if (isset($_POST["multiple$qCount$aCount"]) &&  ($_POST["multiple$qCount$aCount"]) == $aCount)
-					{
+					if (isset($_POST["multiple$qCount$aCount"]) &&  ($_POST["multiple$qCount$aCount"]) == $aCount){
 						echo "multiple$qCount$aCount";
 					}				
-					//echo "</br>a value : $aCount";
 					$aCount++;			
 				}
 				$aCount = 1; // init
-				//echo "multiple$qCount$aCount";
 			}
+			*/
 			
 			if (isset($_POST["text$qCount"])){
 				echo "text$qCount";		
