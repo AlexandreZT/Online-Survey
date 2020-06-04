@@ -81,7 +81,7 @@ if (!isset($_SESSION['pseudo'])) {
 					?> <input type="radio" name="unique<?php echo "$_SESSION[qNum]"?>" value="<?php echo "$aNum"?>"/><?php // onclick="document.getElementById('id').checked = false;"	
 				}	
 			}
-			echo "$row[answer] $_SESSION[qNum]$aNum</br>";
+			echo "$row[answer]</br>"; // $_SESSION[qNum]$aNum aide répère
 			$aNum++;
 		}
 		$_SESSION['qNum']++;

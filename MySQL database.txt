@@ -41,4 +41,4 @@ answer VARCHAR(255) NOT NULL,
 FOREIGN KEY(respondent) REFERENCES members(id),
 FOREIGN KEY(creator) REFERENCES surveys(owner),
 FOREIGN KEY(survey) REFERENCES surveys(id),
-FOREIGN KEY(question) REFERENCES questions(id);
+FOREIGN KEY(question) REFERENCES questions(id));
