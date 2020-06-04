@@ -101,8 +101,7 @@ if (!isset($_SESSION['pseudo'])) {
 				while ($aCount <= 5) { // nb max de reponse par question
 					if($_POST["unique$qCount"] == $aCount) // selection reponse 1
 					{
-						//echo "unique$qCount$aCount"; // requete owner_id / poll_id qCount / aCount
-						$req_answ_to_analyse = $mysqli->query("INSERT INTO `analyses` (`respondent`, `creator`, `survey`, `question`,`answer`) VALUES ($_SESSION[id], $_SESSION[owner_id], $_SESSION[poll_id], $qCount, $qCount)");
+						$req_answ_to_analyse = $mysqli->query("INSERT INTO `analyses` (`respondent`, `creator`, `survey`, `question`,`answer`) VALUES ($_SESSION[id], $_SESSION[owner_id], $_SESSION[poll_id], $qCount, $aCount)");
 					}
 					$aCount++;			
 				}
@@ -111,8 +110,7 @@ if (!isset($_SESSION['pseudo'])) {
 			// debut par un while
 			while ($aCount < 5) { // nb max de reponse par question
 				if (isset($_POST["multiple$qCount$aCount"])){
-					$req_answ_to_analyse = $mysqli->query("INSERT INTO `analyses` (`respondent`, `creator`, `survey`, `question`,`answer`) VALUES ($_SESSION[id], $_SESSION[owner_id], $_SESSION[poll_id], $qCount, $qCount)");
-					// echo "multiple$qCount$aCount";
+					$req_answ_to_analyse = $mysqli->query("INSERT INTO `analyses` (`respondent`, `creator`, `survey`, `question`,`answer`) VALUES ($_SESSION[id], $_SESSION[owner_id], $_SESSION[poll_id], $qCount, $aCount)");
 				}
 				$aCount++;
 			}
@@ -120,10 +118,8 @@ if (!isset($_SESSION['pseudo'])) {
 			
 			if (isset($_POST["text$qCount"])){
 				$text_query = "text$qCount";
-				$req_answ_to_analyse = $mysqli->query("INSERT INTO `analyses` (`respondent`, `creator`, `survey`, `question`,`answer`) VALUES ($_SESSION[id], $_SESSION[owner_id], $_SESSION[poll_id], $qCount, '$_POST[$text_query]')");
-				// echo "text$qCount";		
+				$req_answ_to_analyse = $mysqli->query("INSERT INTO `analyses` (`respondent`, `creator`, `survey`, `question`,`answer`) VALUES ($_SESSION[id], $_SESSION[owner_id], $_SESSION[poll_id], $qCount, '$_POST[$text_query]')");		
 			}
-			//echo "</br>q value : $qCount";
 			$qCount++;
 		}
 		echo "Merci, vos réponses ont bien été prises en compte";
