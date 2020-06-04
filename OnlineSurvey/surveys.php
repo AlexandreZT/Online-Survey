@@ -38,7 +38,7 @@ if (!isset($_SESSION['pseudo'])) {
 	echo "<h2 style='text-decoration: underline;'>$title</h2>";
 	$req_owner_quest = $mysqli->query("SELECT * FROM questions WHERE `poll` = '$_POST[poll_id]'"); // question / mandatory / type
 	$req_owner_quest->data_seek(0);
-	$qNum = 1;
+	$_SESSION['qNum'] = 1;
 	while ($row = $req_owner_quest->fetch_assoc()) {
 		echo "<h4>$row[question]</h4>";
 		$quest_id = $row['id'];
@@ -55,44 +55,67 @@ if (!isset($_SESSION['pseudo'])) {
 			
     		if ($quest_type == 2) { // si c'est une réponse textuelle
 				if ($quest_mandatory == 1) { // si c'est obligatoire (TRUE)
-					?> <textarea style="resize: none" name="message<?php echo "$qNum"?>" cols="40" rows="5" placeholder="Saississez votre réponse" minlength='20' maxlength='400'></textarea> <?php
+					?> <textarea style="resize: none" name="text<?php echo "$_SESSION[qNum]"?>" cols="40" rows="5" placeholder="Saississez votre réponse" minlength='20' maxlength='400'></textarea> <?php
 				}
 				else {
-					?> <textarea style="resize: none" name="message<?php echo "$qNum"?>" cols="40" rows="5" placeholder="Saississez votre réponse" maxlength='400'></textarea> <?php
-					
-
+					?> <textarea style="resize: none" name="text<?php echo "$_SESSION[qNum]"?>" cols="40" rows="5" placeholder="Saississez votre réponse" maxlength='400'></textarea> <?php
 				}
 				$row['answer'] = ""; // ne rien afficher à l'écran
 			}
 			else if ($quest_type == 1) { // si c'est une réponse multiple
 				if ($quest_mandatory == 1 ) { // si c'est obligatoire (TRUE)
-					?> <input type="checkbox" name="multiple<?php echo "$qNum$aNum"?>"/> <?php
+					?> <input type="checkbox" name="multiple<?php echo "$_SESSION[qNum]$aNum"?>" value=""/> <?php
 				}
 				else {
-					?> <input type="checkbox" name="multiple<?php echo "$qNum$aNum"?>"/> <?php
+					?> <input type="checkbox" name="multiple<?php echo "$_SESSION[qNum]$aNum"?>" value=""/> <?php
 				}
 			}
 			
 			else { // ($quest_type == 0) si c'est une réponse unique
 				if ($quest_mandatory == 1) { // si c'est obligatoire (TRUE)
-					?> <input type="radio" name="unique<?php echo "$qNum$aNum"?>" value="test"/> <?php // checked
+					?> <input type="radio" name="unique<?php echo "$_SESSION[qNum]$aNum"?>" value=""/><?php // checked
 				}
 				else {
-					?> <input type="radio" name="unique<?php echo "$qNum$aNum"?>" value="test"/> <?php // onclick="document.getElementById('id').checked = false;"	
+					?> <input type="radio" name="unique<?php echo "$_SESSION[qNum]$aNum"?>" value=""/><?php // onclick="document.getElementById('id').checked = false;"	
 				}	
 			}
-			echo "$row[answer] $qNum$aNum</br>";
+			echo "$row[answer] $_SESSION[qNum]$aNum</br>";
 			$aNum++;
 		}
-		$qNum++;
+		$_SESSION['qNum']++;
 	}
+	$_SESSION['qNum']--; // enlève l'incrémentation de trop lorsque l'on sort de la boucle
 	?> </br> </br> <input type="submit" name="soumettre" value="Soumettre mes réponses"/> </form> <?php
 }																											
 ?>
 
 <?php
     if (isset($_POST['soumettre'])) {
+		$qCount = 1;
+		$aCount = 1;
+		// echo "$_SESSION[qNum]"; // nb de boucle à traité par question
+		while ($qCount < $_SESSION['qNum']) {
+			while ($aCount < 5) { // nb max de reponse par question
+				if (isset($_POST["unique$qCount$aCount"])){
+					echo "unique$qCount$aCount";
+				}		
+				if (isset($_POST["multiple$qCount$aCount"])){
+					echo "multiple$qCount$aCount";
+				}
+				
+				if (isset($_POST["text$qCount"])){
+					echo "text$qCount$aCount";
+				}
+				//echo "</br>a value : $aCount";
+				$aCount++;			
+			}
+			//echo "</br>q value : $qCount";
+			$qCount++;
+		}
+		// echo "</br>a value : $aCount & q value : $qCount";
 		//$req_answ_to_resume = $mysqli->query("INSERT INTO `resume` (`survey`, `question`,`answer`) VALUES (`survey`, `question`,`answer`)");
+		/*
+		echo "$_SESSION[qNum]"; //nb de boucle à traité par question
 		echo $_POST['unique11'];
 		echo $_POST['unique12'];
 		echo $_POST['unique13'];
@@ -107,6 +130,7 @@ if (!isset($_SESSION['pseudo'])) {
 		echo $_POST['multiple52'];
 		echo $_POST['multiple53'];
 		echo $_POST['message6'];
+		*/
 	}
 ?>
 
