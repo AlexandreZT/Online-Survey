@@ -29,11 +29,13 @@ if (!isset($_SESSION['pseudo'])) {
 	$req_owner_id->data_seek(0);
 	$row = $req_owner_id->fetch_assoc();
 	$owner_id = $row['id']; // ok jusque là
+	$_SESSION['owner_id'] = $owner_id;
 
 	$req_owner_surv = $mysqli->query("SELECT `title` FROM surveys WHERE `owner` = $owner_id AND `id` = '$_POST[poll_id]'");
 	$req_owner_surv->data_seek(0);
 	$row = $req_owner_surv->fetch_assoc();
 	$title = $row['title'];
+	$_SESSION['poll_id'] = $_POST['poll_id'];
 
 	echo "<h2 style='text-decoration: underline;'>$title</h2>";
 	$req_owner_quest = $mysqli->query("SELECT * FROM questions WHERE `poll` = '$_POST[poll_id]'"); // question / mandatory / type
@@ -99,41 +101,37 @@ if (!isset($_SESSION['pseudo'])) {
 				while ($aCount <= 5) { // nb max de reponse par question
 					if($_POST["unique$qCount"] == $aCount) // selection reponse 1
 					{
-						echo "unique$qCount$aCount"; // requete owner_id / poll_id qCount / aCount
+						//echo "unique$qCount$aCount"; // requete owner_id / poll_id qCount / aCount
+						$req_answ_to_analyse = $mysqli->query("INSERT INTO `analyses` (`respondent`, `creator`, `survey`, `question`,`answer`) VALUES ($_SESSION[id], $_SESSION[owner_id], $_SESSION[poll_id], $qCount, $qCount)");
 					}
 					$aCount++;			
 				}
-				$aCount = 1; // init
+				$aCount = 1; // reinit
 			}	
 			// debut par un while
 			while ($aCount < 5) { // nb max de reponse par question
 				if (isset($_POST["multiple$qCount$aCount"])){
-					echo "multiple$qCount$aCount";
+					$req_answ_to_analyse = $mysqli->query("INSERT INTO `analyses` (`respondent`, `creator`, `survey`, `question`,`answer`) VALUES ($_SESSION[id], $_SESSION[owner_id], $_SESSION[poll_id], $qCount, $qCount)");
+					// echo "multiple$qCount$aCount";
 				}
 				$aCount++;
 			}
-			$aCount = 1; // init
-/*
-			if (isset($_POST["multiple$qCount$aCount"])){
-				while ($aCount < 5) { // nb max de reponse par question
-					if (isset($_POST["multiple$qCount$aCount"]) &&  ($_POST["multiple$qCount$aCount"]) == $aCount){
-						echo "multiple$qCount$aCount";
-					}				
-					$aCount++;			
-				}
-				$aCount = 1; // init
-			}
-			*/
+			$aCount = 1; // reinit
 			
 			if (isset($_POST["text$qCount"])){
-				echo "text$qCount";		
+				if ($qCount == 3) {
+					$req_answ_to_analyse = $mysqli->query("INSERT INTO `analyses` (`respondent`, `creator`, `survey`, `question`,`answer`) VALUES ($_SESSION[id], $_SESSION[owner_id], $_SESSION[poll_id], $qCount, '$_POST[text3]')");
+				}
+				if ($qCount == 6) {
+					$req_answ_to_analyse = $mysqli->query("INSERT INTO `analyses` (`respondent`, `creator`, `survey`, `question`,`answer`) VALUES ($_SESSION[id], $_SESSION[owner_id], $_SESSION[poll_id], $qCount, '$_POST[text6]')");
+				}
+				// echo "text$qCount";		
 			}
 			
 			//echo "</br>q value : $qCount";
 			$qCount++;
 		}
-		//$req_answ_to_analyse = $mysqli->query("INSERT INTO `analyses` (`owner`, `survey`, `question`,`answer`) VALUES ($owner_id, $poll_id, $ $qCount, $qCount)");
+		echo "Merci, vos réponses ont bien été prises en compte";
+		
 	}
 ?>
-
-
