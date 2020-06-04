@@ -119,15 +119,10 @@ if (!isset($_SESSION['pseudo'])) {
 			$aCount = 1; // reinit
 			
 			if (isset($_POST["text$qCount"])){
-				if ($qCount == 3) {
-					$req_answ_to_analyse = $mysqli->query("INSERT INTO `analyses` (`respondent`, `creator`, `survey`, `question`,`answer`) VALUES ($_SESSION[id], $_SESSION[owner_id], $_SESSION[poll_id], $qCount, '$_POST[text3]')");
-				}
-				if ($qCount == 6) {
-					$req_answ_to_analyse = $mysqli->query("INSERT INTO `analyses` (`respondent`, `creator`, `survey`, `question`,`answer`) VALUES ($_SESSION[id], $_SESSION[owner_id], $_SESSION[poll_id], $qCount, '$_POST[text6]')");
-				}
+				$text_query = "text$qCount";
+				$req_answ_to_analyse = $mysqli->query("INSERT INTO `analyses` (`respondent`, `creator`, `survey`, `question`,`answer`) VALUES ($_SESSION[id], $_SESSION[owner_id], $_SESSION[poll_id], $qCount, '$_POST[$text_query]')");
 				// echo "text$qCount";		
 			}
-			
 			//echo "</br>q value : $qCount";
 			$qCount++;
 		}
