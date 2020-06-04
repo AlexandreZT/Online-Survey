@@ -64,19 +64,19 @@ if (!isset($_SESSION['pseudo'])) {
 			}
 			else if ($quest_type == 1) { // si c'est une réponse multiple
 				if ($quest_mandatory == 1 ) { // si c'est obligatoire (TRUE)
-					?> <input type="checkbox" name="multiple<?php echo "$_SESSION[qNum]$aNum"?>" value=""/> <?php
+					?> <input type="checkbox" name="multiple<?php echo "$_SESSION[qNum]$aNum"?>" value="<?php echo "$aNum"?>"/> <?php
 				}
 				else {
-					?> <input type="checkbox" name="multiple<?php echo "$_SESSION[qNum]$aNum"?>" value=""/> <?php
+					?> <input type="checkbox" name="multiple<?php echo "$_SESSION[qNum]$aNum"?>" value="<?php echo "$aNum"?>"/> <?php
 				}
 			}
 			
 			else { // ($quest_type == 0) si c'est une réponse unique
 				if ($quest_mandatory == 1) { // si c'est obligatoire (TRUE)
-					?> <input type="radio" name="unique<?php echo "$_SESSION[qNum]$aNum"?>" value=""/><?php // checked
+					?> <input type="radio" name="unique<?php echo "$_SESSION[qNum]"?>" value="<?php echo "$aNum"?>"/><?php // checked
 				}
 				else {
-					?> <input type="radio" name="unique<?php echo "$_SESSION[qNum]$aNum"?>" value=""/><?php // onclick="document.getElementById('id').checked = false;"	
+					?> <input type="radio" name="unique<?php echo "$_SESSION[qNum]"?>" value="<?php echo "$aNum"?>"/><?php // onclick="document.getElementById('id').checked = false;"	
 				}	
 			}
 			echo "$row[answer] $_SESSION[qNum]$aNum</br>";
@@ -95,42 +95,38 @@ if (!isset($_SESSION['pseudo'])) {
 		$aCount = 1;
 		// echo "$_SESSION[qNum]"; // nb de boucle à traité par question
 		while ($qCount < $_SESSION['qNum']) {
-			while ($aCount < 5) { // nb max de reponse par question
-				if (isset($_POST["unique$qCount$aCount"])){
-					echo "unique$qCount$aCount";
-				}		
-				if (isset($_POST["multiple$qCount$aCount"])){
-					echo "multiple$qCount$aCount";
+			if (isset($_POST["unique$qCount"])){
+				while ($aCount < 5) { // nb max de reponse par question
+					if($_POST["unique$qCount"] == $aCount) // selection reponse 1
+					{
+						echo "unique$qCount$aCount"; // requete owner_id / poll_id qCount / aCount
+					}
+					$aCount++;			
 				}
-				
-				if (isset($_POST["text$qCount"])){
-					echo "text$qCount$aCount";
+				$aCount = 1; // init
+
+			}		
+			if (isset($_POST["multiple$qCount$aCount"])){
+				while ($aCount < 5) { // nb max de reponse par question
+					if (isset($_POST["multiple$qCount$aCount"]) &&  ($_POST["multiple$qCount$aCount"]) == $aCount)
+					{
+						echo "multiple$qCount$aCount";
+					}				
+					//echo "</br>a value : $aCount";
+					$aCount++;			
 				}
-				//echo "</br>a value : $aCount";
-				$aCount++;			
+				$aCount = 1; // init
+				//echo "multiple$qCount$aCount";
 			}
+			
+			if (isset($_POST["text$qCount"])){
+				echo "text$qCount";		
+			}
+			
 			//echo "</br>q value : $qCount";
 			$qCount++;
 		}
-		// echo "</br>a value : $aCount & q value : $qCount";
-		//$req_answ_to_resume = $mysqli->query("INSERT INTO `resume` (`survey`, `question`,`answer`) VALUES (`survey`, `question`,`answer`)");
-		/*
-		echo "$_SESSION[qNum]"; //nb de boucle à traité par question
-		echo $_POST['unique11'];
-		echo $_POST['unique12'];
-		echo $_POST['unique13'];
-		echo $_POST['multiple21'];
-		echo $_POST['multiple22'];
-		echo $_POST['multiple23'];
-		echo $_POST['message3'];
-		echo $_POST['unique41'];
-		echo $_POST['unique42'];
-		echo $_POST['unique43'];
-		echo $_POST['multiple51'];
-		echo $_POST['multiple52'];
-		echo $_POST['multiple53'];
-		echo $_POST['message6'];
-		*/
+		//$req_answ_to_analyse = $mysqli->query("INSERT INTO `analyses` (`owner`, `survey`, `question`,`answer`) VALUES ($owner_id, $poll_id, $ $qCount, $qCount)");
 	}
 ?>
 
