@@ -182,12 +182,14 @@
                                         </i>Analyse des sondages
                                     </a>
                                 </li>
+                                <!--
                                 <li>
                                     <a href="forms-validation.html">
                                         <i class="metismenu-icon pe-7s-mouse">
                                         </i>Forms Validation
                                     </a>
                                 </li>
+                                -->
                                 <li>
                                 <a href="surveys.php" target="_blank">
                                         <i class="metismenu-icon pe-7s-eyedropper">
