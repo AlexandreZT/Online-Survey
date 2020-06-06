@@ -32,13 +32,13 @@ choice INT NOT NULL,
 answer VARCHAR(255) NOT NULL,
 FOREIGN KEY(choice) REFERENCES questions(id));
 
-CREATE TABLE resume (
+CREATE TABLE analyses (
+respondent INT NOT NULL,
 creator INT NOT NULL,
 survey INT NOT NULL,
 question INT NOT NULL,
-answer INT NOT NULL,
-FOREIGN KEY(creator) REFERENCES members(id));
-FOREIGN KEY(survey) REFERENCES surveys(id));
+answer VARCHAR(255) NOT NULL,
+FOREIGN KEY(respondent) REFERENCES members(id),
+FOREIGN KEY(creator) REFERENCES surveys(owner),
+FOREIGN KEY(survey) REFERENCES surveys(id),
 FOREIGN KEY(question) REFERENCES questions(id));
-FOREIGN KEY(answer) REFERENCES answers(id));
-);
