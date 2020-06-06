@@ -2,35 +2,20 @@
 <meta charset="utf-8">
 
 <?php
-    //Step 1: Open MySQL Database Connection in PHP
-    //open connection to mysql db
     session_start(); // Démarre une nouvelle session ou reprend une session existante
-    $connection = mysqli_connect("127.0.0.1","root","","2proj") or die("Erreur " . mysqli_error($connection));
+    $mysqli = mysqli_connect("127.0.0.1", "root", "", "2proj"); // connexion à la base de donnée
 
-    //Step 2: Fetch Data from MySQL Database
+    $req_download = $mysqli->query("SELECT * FROM analyses WHERE `creator` = $_SESSION[id]");
 
-    //fetch table rows from mysql db
-    $sql = "SELECT * FROM analyses WHERE `creator` = $_SESSION[id]";
-    $result = mysqli_query($connection, $sql) or die("Erreur " . mysqli_error($connection));
+    $surveyArray = array();
 
-    //Step 3: Convert MySQL Result Set to PHP Array
-
-    //create an array
-    $emparray = array();
-    while($row = mysqli_fetch_assoc($result))
+    while($row = mysqli_fetch_assoc($req_download))
     {
-        $emparray[] = $row;
+        $surveyArray[] = $row;
     }
 
-    //Convertion tableau PHP en Chaine JSON (+ affichage)
- 
-    // echo json_encode($emparray);
-    
-    //Step 5: Convert MySQL to JSON File in PHP
-
-    //write to json file
     $fp = fopen('MySurveyData.json', 'w');
-    fwrite($fp, json_encode($emparray));
+    fwrite($fp, json_encode($surveyArray, JSON_UNESCAPED_UNICODE));
     fclose($fp);
     echo "Vos données de sondages ont bien été téléchargé !"
 ?>

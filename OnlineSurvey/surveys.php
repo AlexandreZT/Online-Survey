@@ -24,7 +24,16 @@
 
 if (!isset($_SESSION['pseudo'])) { 
 		echo "Vous devez vous connecter"; // puis entrer le pseudo du créateur du poll et l'id du poll"; // si quelqu'un est connecté
-} else if (isset($_POST['search'])) {                          
+
+} else if (isset($_POST['search'])) {              
+	$req_responder_id = $mysqli->query("SELECT `respondent` FROM analyses WHERE `respondent`= $_SESSION[id]");
+	$req_responder_id->data_seek(0);
+	$row = $req_responder_id->fetch_assoc();
+	if ($row['respondent'] == $_SESSION['id'])
+	{
+		echo "Vous avez deja répondu à ce questionnaire";
+		die;
+	}            
 	$req_owner_id = $mysqli->query("SELECT `id` FROM members WHERE `pseudo` = '$_POST[owner_pseudo]'");
 	$req_owner_id->data_seek(0);
 	$row = $req_owner_id->fetch_assoc();
