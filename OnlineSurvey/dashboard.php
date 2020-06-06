@@ -172,32 +172,32 @@
                                 <li class="app-sidebar__heading">Forms</li>
                                 <li>
                                     <a href="export-to-json.php">
-                                        <i class="metismenu-icon pe-7s-mouse">
+                                        <i class="metismenu-icon pe-7s-pendrive">
                                         </i>Télécharger les réponses
                                     </a>
                                 </li>
                                 <li>
-                                    <a href="forms-layouts.html">
-                                        <i class="metismenu-icon pe-7s-eyedropper">
-                                        </i>Forms Layouts
+                                    <a href="analyses.php">
+                                        <i class="metismenu-icon pe-7s-graph2"> 
+                                        </i>Analyse des sondages
                                     </a>
                                 </li>
                                 <li>
                                     <a href="forms-validation.html">
-                                        <i class="metismenu-icon pe-7s-pendrive">
+                                        <i class="metismenu-icon pe-7s-mouse">
                                         </i>Forms Validation
                                     </a>
                                 </li>
                                 <li>
                                 <a href="surveys.php" target="_blank">
-                                        <i class="metismenu-icon pe-7s-graph2">
+                                        <i class="metismenu-icon pe-7s-eyedropper">
                                         </i>
                                         Répondre à un questionnaire
                                     </a>
                                 </li>
                                 <li class="app-sidebar__heading">PRO Version</li>
                                 <li>
-                                    <a href="https://dashboardpack.com/theme-details/architectui-dashboard-html-pro/" target="_blank">
+                                    <a href="#pricing" target="_blank">
                                         <i class="metismenu-icon pe-7s-graph2">
                                         </i>
                                         Upgrade to PRO

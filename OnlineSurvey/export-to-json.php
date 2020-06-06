@@ -17,5 +17,5 @@
     $fp = fopen('MySurveyData.json', 'w');
     fwrite($fp, json_encode($surveyArray, JSON_UNESCAPED_UNICODE));
     fclose($fp);
-    echo "Vos données de sondages ont bien été téléchargé !"
+    echo "Vos données de sondages ont bien été téléchargé !";
 ?>
