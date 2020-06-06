@@ -4,19 +4,19 @@
 body {
   font-family: "Quicksand", sans-serif;
   /*color: #444444;*/
-  background-color: #ffffff;
+  background-color: rgba(51, 51, 153, 0.08);
 }
 
 span {
-  color: #59BDB6;
+  color: #333399;
 }
 
 a {
-  color: #59BDB6;
+  color: #333399;
 }
 
 a:hover {
-  color: #59BDB6;
+  color: #333399;
   text-decoration: none;
 }
 
@@ -48,13 +48,13 @@ h1, h2, h3, h4, h5, h6 {
   width: 40px;
   height: 40px;
   border-radius: 4px;
-  background: #59BDB6;
+  background: #333399;
   color: #fff;
   transition: all 0.4s;
 }
 
 .back-to-top i:hover {
-  background: #59BDB6;
+  background: #333399;
   color: #fff;
 }
 
@@ -74,13 +74,13 @@ h1, h2, h3, h4, h5, h6 {
   height: 80px;
   z-index: 997;
   transition: all 0.5s;
-  background: rgb(89, 189, 182);
+  background: rgb(51, 51, 153);
 }
 
 #header.header-scrolled {
   box-shadow: 0px 2px 15px rgba(0, 0, 0, 0.8);
   height: 60px;
-  background: rgba(89, 189, 182, 0.9);
+  background: rgba(51, 51, 153, 0.8);
 }
 
 #header .logo h1 {
@@ -146,7 +146,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .nav-menu .get-started a {
-  background: #59BDB6;
+  background: #333399;
   color: #fff;
   border-radius: 50px;
   margin: 0 0 0 30px;
@@ -250,7 +250,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .mobile-nav a:hover, .mobile-nav .active > a, .mobile-nav li:hover > a {
-  color: #59BDB6;
+  color: #333399;
   text-decoration: none;
 }
 
@@ -260,7 +260,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .mobile-nav .get-started a {
-  background: #59BDB6;
+  background: #333399;
   color: #fff;
   border-radius: 50px;
   margin: 0 15px;
@@ -269,7 +269,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .mobile-nav .get-started a:hover {
-  background: #59BDB6;
+  background: #333399;
   color: #fff;
 }
 
@@ -359,12 +359,12 @@ h1, h2, h3, h4, h5, h6 {
   padding: 10px 30px;
   border-radius: 50px;
   transition: 0.5s;
-  color: #59BDB6;
-  border: 2px solid #59BDB6;
+  color: #333399;
+  border: 2px solid #333399;
 }
 
 #hero .btn-get-started:hover {
-  background: #59BDB6;
+  background: #333399;
   color: #fff;
 }
 
@@ -466,7 +466,7 @@ section {
   content: '';
   width: 50px;
   height: 3px;
-  background: #59BDB6;
+  background: #333399;
   display: inline-block;
 }
 
@@ -486,7 +486,10 @@ section {
 # Clients
 --------------------------------------------------------------*/
 .clients {
-  background: white;
+  border-width: 3px;
+  border-style: solid;
+  border-color: rgb(51, 51, 153);
+  /*background: rgb(51, 51, 153);*/
   padding: 10px 0;
   text-align: center;
 }
@@ -569,15 +572,15 @@ section {
   border-radius: 50px;
   transition: 0.3s;
   line-height: 1;
-  color: #59BDB6;
+  color: #333399;
   -webkit-animation-delay: 0.8s;
   animation-delay: 0.8s;
   margin-top: 6px;
-  border: 2px solid #59BDB6;
+  border: 2px solid #333399;
 }
 
 .about .content .btn-learn-more:hover {
-  background: #59BDB6;
+  background: #333399;
   color: #fff;
   text-decoration: none;
 }
@@ -611,7 +614,7 @@ section {
 .counts .content .count-box i {
   display: block;
   font-size: 36px;
-  color: #59BDB6;
+  color: #333399;
   float: left;
 }
 
@@ -689,7 +692,7 @@ section {
 }
 
 .services .icon-box:hover::before {
-  background: #59BDB6;
+  background: #333399;
   right: 0;
   top: 0;
   width: 100%;
@@ -705,7 +708,7 @@ section {
   border-radius: 50%;
   width: 60px;
   height: 60px;
-  background: #59BDB6;
+  background: #333399;
   transition: all 0.3s ease-in-out;
 }
 
@@ -740,7 +743,7 @@ section {
 }
 
 .services .icon-box:hover .icon i {
-  color: #59BDB6;
+  color: #333399;
 }
 
 /*--------------------------------------------------------------
@@ -923,7 +926,7 @@ section {
 
 .pricing .box h4 {
   font-size: 42px;
-  color: #59BDB6;
+  color: #333399;
   font-weight: 500;
   font-family: "Quicksand", sans-serif;
   margin-bottom: 20px;
@@ -955,7 +958,7 @@ section {
 }
 
 .pricing .box ul i {
-  color: #59BDB6;
+  color: #333399;
   font-size: 18px;
   padding-right: 4px;
 }
@@ -974,8 +977,8 @@ section {
   display: inline-block;
   padding: 10px 40px 12px 40px;
   border-radius: 50px;
-  border: 2px solid #59BDB6;
-  color: #59BDB6;
+  border: 2px solid #333399;
+  color: #333399;
   font-size: 14px;
   font-weight: 400;
   font-family: "Raleway", sans-serif;
@@ -984,22 +987,22 @@ section {
 }
 
 .pricing .box .btn-buy:hover {
-  background: #59BDB6;
+  background: #333399;
   color: #fff;
 }
 
 .pricing .recommended {
-  border-color: #59BDB6;
+  border-color: #333399;
 }
 
 .pricing .recommended .btn-buy {
-  background: #59BDB6;
+  background: #333399;
   color: #fff;
 }
 
 .pricing .recommended .btn-buy:hover {
-  background: #59BDB6;
-  border-color: #59BDB6;
+  background: #333399;
+  border-color: #333399;
 }
 
 /*--------------------------------------------------------------
