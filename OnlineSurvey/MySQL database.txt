@@ -1,0 +1,44 @@
+create database 2proj;
+
+use 2proj;
+
+CREATE TABLE members (
+id INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
+pseudo VARCHAR(25) NOT NULL,
+mail VARCHAR(25) NOT NULL,
+mdp CHAR(32) NOT NULL);
+
+
+CREATE TABLE surveys (
+id INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
+owner INT NOT NULL,
+title VARCHAR(100) NOT NULL,
+status INT NOT NULL,
+FOREIGN KEY(owner) REFERENCES members(id));
+
+
+CREATE TABLE questions (
+id INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
+poll INT NOT NULL,
+question VARCHAR(255) NOT NULL,
+mandatory BOOLEAN,
+type INT NOT NULL,
+FOREIGN KEY(poll) REFERENCES surveys(id));
+
+
+CREATE TABLE answers (
+id INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
+choice INT NOT NULL,
+answer VARCHAR(255) NOT NULL,
+FOREIGN KEY(choice) REFERENCES questions(id));
+
+CREATE TABLE analyses (
+respondent INT NOT NULL,
+creator INT NOT NULL,
+survey INT NOT NULL,
+question INT NOT NULL,
+answer VARCHAR(255) NOT NULL,
+FOREIGN KEY(respondent) REFERENCES members(id),
+FOREIGN KEY(creator) REFERENCES surveys(owner),
+FOREIGN KEY(survey) REFERENCES surveys(id),
+FOREIGN KEY(question) REFERENCES questions(id));
