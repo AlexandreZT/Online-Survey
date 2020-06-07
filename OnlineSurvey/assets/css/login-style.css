@@ -388,3 +388,7 @@ input[type=submit]:hover {
     color: #59BDB6;
     border: 1px solid #59BDB6;
 }
+
+h6 {
+  color:#59BDB6;
+}

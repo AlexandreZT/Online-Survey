@@ -147,7 +147,7 @@ name="nom de l'input" sert à le reconnaitre une fois le bouton submit cliqué, 
             <input type="password" name="mdp" placeholder="Veuillez saisir un mot de passe" value="" />
             <label><b>Adresse Mail</b></label>
             <input type="text" name="mail" placeholder="Veuillez saisir une adresse mail" value="" />
-            <a id="already" href="login.php"><p style="text-align:center">Déja inscrit ?</p></a>
+            <a id="already" href="login.php"><h6 style="text-align:center">Déja inscrit ?</h6></a>
             <input type="submit" name="connexion" value="Je m'inscris" />
         </form>
     </div>

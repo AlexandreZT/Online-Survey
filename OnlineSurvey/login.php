@@ -115,7 +115,7 @@ if (isset($_POST['connexion'])) { // si le bouton "Connexion" est appuyé
         <input type="text" name="pseudo" placeholder="Veuillez saisir votre nom d'utilisateur" value="" />
         <label><b>Mot de Passe</b></label>
         <input type="password" name="mdp" placeholder="Veuillez saisir votre mot de passe" value="" />
-        <a id="already"  href="registration.php"> <p style="text-align:center">Pas encore inscrit ?</p></a> 
+        <a id="already"  href="registration.php"> <h6 style="text-align:center">Pas encore inscrit ?</h6></a> 
 
         <input type="submit" name="connexion" value="Je me connecte" />
         
