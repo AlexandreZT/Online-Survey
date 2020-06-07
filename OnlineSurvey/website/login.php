@@ -42,7 +42,7 @@ if (isset($_POST['connexion'])) { // si le bouton "Connexion" est appuyé
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
 
-  <title>Connexion | Check Survey</title>
+  <title>Connexion | Online Survey</title>
   <meta content="" name="descriptison">
   <meta content="" name="keywords">
 
@@ -75,7 +75,7 @@ if (isset($_POST['connexion'])) { // si le bouton "Connexion" est appuyé
       <div class="logo mr-auto">
         <!--<h1 class="text-light"><a href="index.php"><span>Vesperr</span></a></h1>-->
         <!-- Uncomment below if you prefer to use an image logo -->
-        <a href="index.php"><img src="assets/img/banner.png" alt="" class="img-fluid"></a>
+        <a href="index.php"><img src="assets/img/banner3.png" alt="" class="img-fluid"></a>
       </div>
 
       <nav class="nav-menu d-none d-lg-block">
