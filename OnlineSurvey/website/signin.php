@@ -42,7 +42,7 @@ session_start();
       <div class="logo mr-auto">
         <!--<h1 class="text-light"><a href="index.php"><span>Vesperr</span></a></h1>-->
         <!-- Uncomment below if you prefer to use an image logo -->
-        <a href="index.php"><img src="assets/img/banner.png" alt="" class="img-fluid"></a>
+        <a href="index.php"><img src="assets/img/banner3.png" alt="" class="img-fluid"></a>
       </div>
 
       <nav class="nav-menu d-none d-lg-block">
@@ -140,7 +140,7 @@ name="nom de l'input" sert à le reconnaitre une fois le bouton submit cliqué, 
 -->
     <div id="container">
         <form class="login" action="signin.php" method="post"> <!-- nom de class prete à confusion -->
-            <h2>Rejoignez-nous !</h2>
+            <h2><b>Rejoignez-nous !</b></h2>
             <label><b>Nom d'Utilisateur</b></label>
             <input type="text" name="pseudo" placeholder="Veuillez saisir un nom d'utilisateur" value="" />
             <label><b>Mot de Passe</b></label>

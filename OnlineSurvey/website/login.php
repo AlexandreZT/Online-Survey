@@ -110,7 +110,7 @@ if (isset($_POST['connexion'])) { // si le bouton "Connexion" est appuyé
 
    <div id="login-container">
     <form class="login" action="login.php" method="post">
-        <h2>Heureux de vous revoir !</h2>
+        <h2><b>Heureux de vous revoir !</b></h2>
         <label><b>Nom d'Utilisateur</b></label>
         <input type="text" name="pseudo" placeholder="Veuillez saisir votre nom d'utilisateur" value="" />
         <label><b>Mot de Passe</b></label>
