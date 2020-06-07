@@ -47,7 +47,7 @@ if (isset($_POST['connexion'])) { // si le bouton "Connexion" est appuyé
   <meta content="" name="keywords">
 
   <!-- Favicons -->
-  <link href="assets/img/favicon.png" rel="icon">
+  <link href="assets/img/favicon3.png" rel="icon">
 
   <!-- Google Fonts -->
  

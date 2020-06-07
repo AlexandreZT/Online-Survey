@@ -3,7 +3,11 @@
   $mysqli = mysqli_connect("127.0.0.1", "root", "", "2proj"); // connexion à la base de donnée
 ?>
 
-<meta charset="utf-8">
+<head>
+    <meta charset="utf-8">
+    <!-- Favicons -->
+    <link href="assets/img/favicon3.png" rel="icon">
+</head>
 
 <?php
     $surveyList = array();

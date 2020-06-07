@@ -11,6 +11,10 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta http-equiv="Content-Language" content="fr">
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+
+    <!-- Favicons -->
+    <link href="assets/img/favicon3.png" rel="icon">
+
     <title>Analytics Dashboard - This is an example dashboard created using build-in elements and components.</title>
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, shrink-to-fit=no" />
     <meta name="description" content="This is an example dashboard created using build-in elements and components.">
@@ -163,36 +167,27 @@
                             <ul class="vertical-nav-menu">
                                 <li class="app-sidebar__heading">Dashboards</li>
                                 <li>
-                                    <a href="index.html" class="mm-active">
-                                        <i class="metismenu-icon pe-7s-rocket"></i>
-                                        Dashboard Example 1
+                                    <a href="#" class="mm-active">
+                                        Mon Dashboard
                                     </a>
                                 </li>
                                 
                                 <li class="app-sidebar__heading">Forms</li>
                                 <li>
                                     <a href="export-to-json.php">
-                                        <i class="metismenu-icon pe-7s-pendrive">
+                                        <i class="metismenu-icon pe-7s-download">
                                         </i>Télécharger les réponses
                                     </a>
                                 </li>
                                 <li>
                                     <a href="analyses.php">
-                                        <i class="metismenu-icon pe-7s-graph2"> 
+                                        <i class="metismenu-icon pe-7s-graph3"> 
                                         </i>Analyse des sondages
                                     </a>
                                 </li>
-                                <!--
-                                <li>
-                                    <a href="forms-validation.html">
-                                        <i class="metismenu-icon pe-7s-mouse">
-                                        </i>Forms Validation
-                                    </a>
-                                </li>
-                                -->
                                 <li>
                                 <a href="surveys.php" target="_blank">
-                                        <i class="metismenu-icon pe-7s-eyedropper">
+                                        <i class="metismenu-icon pe-7s-pen">
                                         </i>
                                         Répondre à un questionnaire
                                     </a>
@@ -200,7 +195,7 @@
                                 <li class="app-sidebar__heading">PRO Version</li>
                                 <li>
                                     <a href="#pricing" target="_blank">
-                                        <i class="metismenu-icon pe-7s-graph2">
+                                    <i class="metismenu-icon pe-7s-rocket"></i>
                                         </i>
                                         Upgrade to PRO
                                     </a>

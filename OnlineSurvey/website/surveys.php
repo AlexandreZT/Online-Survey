@@ -8,7 +8,11 @@
 <!-- Si il a déjà répondu au questionnaire il n'aura pas le droit de répondre à nouveau -->
 <!-- on y répond anonymement -->
 
-<meta charset="utf-8">
+<head>
+    <meta charset="utf-8">
+    <!-- Favicons -->
+    <link href="assets/img/favicon3.png" rel="icon">
+</head>
 
 <form id="find_surveys" action="surveys.php" method="post">
         <h2>Accèdez au questionnaire de votre choix</h2>

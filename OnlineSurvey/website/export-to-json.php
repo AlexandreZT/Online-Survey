@@ -1,5 +1,8 @@
-
-<meta charset="utf-8">
+<head>
+    <meta charset="utf-8">
+    <!-- Favicons -->
+    <link href="assets/img/favicon3.png" rel="icon">
+</head>
 
 <?php
     session_start(); // Démarre une nouvelle session ou reprend une session existante
