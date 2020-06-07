@@ -31,10 +31,24 @@
                 $answer = 1;
                 echo "Question $question : ";
                 while ($answer <= 5) {
-                    $req_analyses = $mysqli->query("SELECT COUNT(answer) FROM analyses WHERE question = $question and answer = $answer");
-                    $row = $req_analyses->fetch_assoc();
-                    $test = $row['COUNT(answer)'];
-                    echo "$test-";
+                    $req_count = $mysqli->query("SELECT COUNT(answer) FROM analyses WHERE `creator`= $_SESSION[id] AND question = $question AND answer = $answer");
+                    // $req_comment = $mysqli->query("SELECT answer FROM analyses WHERE question = $question AND answer NOT LIKE = '%[^0-9]%'");
+                    $req_comment = $mysqli->query("SELECT answer FROM analyses WHERE question = $question");
+
+                    $count_row = $req_count->fetch_assoc();
+                    $comment_row = $req_comment->fetch_assoc();
+
+                    $test = $count_row['COUNT(answer)'];
+                    $test2 = $comment_row['answer'];
+                    
+                    if ($test != 0)
+                    {
+                        echo "réponse n°$answer = $test, ";
+ 
+                    }
+                    else if ($test2 != 1 && $test2 != 2 && $test2 != 3 && $test2 != 4 && $test2 != 5) {
+                        echo "$test2-";
+                    }
                     $answer++;
                 }
             echo "<br>";
