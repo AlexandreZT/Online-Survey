@@ -10,6 +10,10 @@
 </head>
 
 <?php
+if (!isset($_SESSION['pseudo'])) { 
+    echo "Vous devez vous connecter"; // puis entrer le pseudo du créateur du poll et l'id du poll"; // si quelqu'un est connecté
+
+} else {
     $surveyList = array();
     $req_analyses = $mysqli->query("SELECT * FROM analyses WHERE `creator`= $_SESSION[id]");
     $req_analyses->data_seek(0);
@@ -52,4 +56,5 @@
             }
         }
     }
+}
 ?>

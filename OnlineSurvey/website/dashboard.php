@@ -36,7 +36,7 @@
     <div class="app-container app-theme-white body-tabs-shadow fixed-sidebar fixed-header">
         <div class="app-header header-shadow">
             <div class="app-header__logo">
-                <div>Online Survey</div>
+                <a href="index.php"><img src="assets/img/banner3.png" alt="" class="img-fluid"></a>
                 <div class="header__pane ml-auto">
                     <div>
                         <button type="button" class="hamburger close-sidebar-btn hamburger--elastic" data-class="closed-sidebar">
@@ -104,14 +104,14 @@
                                     <div class="widget-heading">
                                     <?php
                                         if (isset($_SESSION['pseudo'])) {
-                                            echo "$_SESSION[pseudo]";
+                                            echo "<h6 style='color:white'> $_SESSION[pseudo]</h6>";
                                         }
-                                        else echo "Mode visiteur";                      
+                                        else echo "<h6 style='color:white'>Mode visiteur</h6>";       
                                             ?>
                                         
                                     </div>
                                     <div class="widget-subheading">
-                                        Membre
+                                        <p style="color:white">Membre</p>
                                     </div>
                                 </div>
                                 <div class="btn-group">
