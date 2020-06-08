@@ -22,7 +22,7 @@ if (!isset($_SESSION['pseudo'])) {
     while ($row = $req_analyses->fetch_assoc()) { // regarde chaque ligne
         array_push($surveyList, $row['survey']); // 51515151515151535353535353
     }
-    if (empty($array_push))
+    if (empty($surveyList))
     {
         echo "<p style='text-align:center; margin-top:15%'>Vous n'avez pas encore reçu de réponses à vos sondages, redirection dans 3 secondes !</p>";
         header("refresh:3; url=dashboard.php");
