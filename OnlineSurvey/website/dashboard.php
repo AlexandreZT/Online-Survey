@@ -230,8 +230,8 @@
                                 }
                                 array_push($surv_id, $row['id']); // à chaque itération je mets les id à la fin du tableau
                                 // print_r(array_values($surv_id)); // fonctionne correctement
-                                echo "<h2 style='text-decoration: underline;'>$row[title] - id : $row[id]</h2>";
-
+                                echo "<h2 style='text-decoration: underline;'>$row[title] - id : $row[id]</h2>";           
+                                                    
                                 // Affichage des questions de chaque sondages :
                                 foreach($surv_id as $surv) { // pour chaque id des sondages
                                     $req_user_quest = $mysqli->query("SELECT * FROM questions WHERE `poll`=$surv");
