@@ -11,7 +11,9 @@
 <head>
     <meta charset="utf-8">
     <!-- Favicons -->
-    <link href="assets/img/favicon3.png" rel="icon">
+	<link href="assets/img/favicon3.png" rel="icon">
+	<!-- Template Main CSS File -->
+	<link href="assets/css/survey-style.css" rel="stylesheet">
 </head>
 
 <form id="find_surveys" action="surveys.php" method="post">

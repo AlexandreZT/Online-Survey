@@ -7,6 +7,8 @@
     <meta charset="utf-8">
     <!-- Favicons -->
     <link href="assets/img/favicon3.png" rel="icon">
+    <!-- Template Main CSS File -->
+    <link href="assets/css/survey-style.css" rel="stylesheet">
 </head>
 
 <?php
@@ -20,6 +22,11 @@ if (!isset($_SESSION['pseudo'])) {
     while ($row = $req_analyses->fetch_assoc()) { // regarde chaque ligne
         array_push($surveyList, $row['survey']); // 51515151515151535353535353
     }
+    if (empty($array_push))
+    {
+        echo "<p style='text-align:center; margin-top:15%'>Vous n'avez pas encore reçu de réponses à vos sondages, redirection dans 3 secondes !</p>";
+        header("refresh:3; url=dashboard.php");
+    }
     
     $currentsurv = 0;
     foreach($surveyList as $surv) {
@@ -28,11 +35,11 @@ if (!isset($_SESSION['pseudo'])) {
             $req_nb_quest = $mysqli->query("SELECT MAX(question) FROM analyses WHERE `creator`= $_SESSION[id] AND `survey`= $currentsurv");
             $row2 = mysqli_fetch_array($req_nb_quest);
             $max_quest = $row2['MAX(question)'];
-            echo "Sondage n° : $currentsurv </br>";
+            echo "<h2 style='text-decoration: underline;'>Sondage n° : $currentsurv </h2>";
             $question = 1;
             while ($question <= $max_quest) {
                 $answer = 1;
-                echo "Question $question : ";
+                echo "<h5>Question $question : </h5>";
                 while ($answer <= 5) {
                     $req_count = $mysqli->query("SELECT COUNT(answer) FROM analyses WHERE `creator`= $_SESSION[id] AND `survey`= $currentsurv AND question = $question AND answer = $answer");
                     // $req_comment = $mysqli->query("SELECT answer FROM analyses WHERE question = $question AND answer NOT LIKE = '%[^0-9]%'");
@@ -48,7 +55,7 @@ if (!isset($_SESSION['pseudo'])) {
                 $req_comment = $mysqli->query("SELECT answer FROM analyses WHERE `survey`= $currentsurv AND question = $question");
                 while ($comment_row = $req_comment->fetch_assoc()) {
                     if ($comment_row['answer'] != 1 && $comment_row['answer']  != 2 && $comment_row['answer']  != 3 && $comment_row['answer']  != 4 && $comment_row['answer']  != 5) {
-                        echo "$comment_row[answer] -";
+                        echo "<p>$comment_row[answer] -</p>";
                     }
                 }
             echo "<br>";
