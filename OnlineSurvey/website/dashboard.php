@@ -249,6 +249,10 @@
                                             $req_user_answ = $mysqli->query("SELECT * FROM answers WHERE `choice`=$quest");
                                             $req_user_answ->data_seek(0);
                                             while ($row = $req_user_answ->fetch_assoc()){
+                                                if ($row['answer'] == "") // si la question n'a pas été nommé
+                                        {
+                                            $row['answer'] = "réponse sans nom"; // alors je la nomme "sans nom"
+                                        }
                                                 echo "<p>- $row[answer]</p>";
                                             }                    
                                         } 

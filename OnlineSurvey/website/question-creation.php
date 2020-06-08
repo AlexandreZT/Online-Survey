@@ -31,7 +31,7 @@
   <link href="assets/vendor/aos/aos.css" rel="stylesheet">
 
   <!-- Template Main CSS File -->
-  <link href="assets/css/answer-style.css" rel="stylesheet">
+  <link href="assets/css/survey-style.css" rel="stylesheet">
 
   <!-- =======================================================
   * Template Name: Vesperr - v2.0.0
@@ -49,7 +49,7 @@
 	      <div class="logo mr-auto">
 	        <!--<h1 class="text-light"><a href="index.html"><span>Vesperr</span></a></h1>-->
 	        <!-- Uncomment below if you prefer to use an image logo -->
-	        <a href="index.php"><img src="assets/img/banner.png" alt="" class="img-fluid"></a>
+	        <a href="index.php"><img src="assets/img/banner3.png" alt="" class="img-fluid"></a>
 	      </div>
 
 	      <nav class="nav-menu d-none d-lg-block">

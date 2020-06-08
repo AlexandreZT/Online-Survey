@@ -49,7 +49,7 @@
 	      <div class="logo mr-auto">
 	        <!--<h1 class="text-light"><a href="index.html"><span>Vesperr</span></a></h1>-->
 	        <!-- Uncomment below if you prefer to use an image logo -->
-	        <a href="index.php"><img src="assets/img/banner.png" alt="" class="img-fluid"></a>
+	        <a href="index.php"><img src="assets/img/banner3.png" alt="" class="img-fluid"></a>
 	      </div>
 
 	      <nav class="nav-menu d-none d-lg-block">

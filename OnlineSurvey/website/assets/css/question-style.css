@@ -4,7 +4,7 @@
 body {
     font-family: "Quicksand", sans-serif;
     /*color: #444444;*/
-    background-color: rgba(89, 189, 182, 0.3);
+    background-color: rgba(51, 51, 153, 0.5);
   }
   
   span {
@@ -91,7 +91,7 @@ input[type=submit] {
     height: 80px;
     z-index: 997;
     transition: all 0.5s;
-    background: rgb(89, 189, 182);
+    background: rgb(51, 51, 153);
   }
   
   #header.header-scrolled {

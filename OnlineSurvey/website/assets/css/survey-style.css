@@ -4,7 +4,11 @@
 body {
     font-family: "Quicksand", sans-serif;
     /*color: #444444;*/
-    background-color: rgba(89, 189, 182, 0.3);
+    background-color: rgba(51, 51, 153, 0.5);
+
+    /*background-color: rgba(89, 189, 182, 0.3);*/
+    
+    
   }
   
   span {
@@ -35,14 +39,14 @@ body {
 
 input[type=text] {
   text-align: center;
-  border: 2px #59BDB6;
+  border: 2px rgb(51, 51, 153);;
   border-radius: 30px;
 }
 
 input[type=submit] {
-  border: 2px solid #59BDB6;
+  border: 2px solid rgb(51, 51, 153);
   color: white;
-  background-color: #59BDB6;
+  background-color: rgb(51, 51, 153);
   border-radius: 50px;
 }
   
@@ -91,7 +95,10 @@ input[type=submit] {
     height: 80px;
     z-index: 997;
     transition: all 0.5s;
-    background: rgb(89, 189, 182);
+    background: rgb(51, 51, 153);
+    /*background: rgb(89, 189, 182);*/
+    
+
   }
   
   #header.header-scrolled {
