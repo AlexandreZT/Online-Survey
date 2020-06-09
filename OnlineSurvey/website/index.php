@@ -158,21 +158,19 @@
         <div class="row content">
           <div class="col-lg-6" data-aos="fade-up" data-aos-delay="150">
             <p>
-              Big Brother, société mère basée dans le bassin rennais vous propose
+            Big Brother, société éditrice de logiciels professionnels basée dans le 14e arrondissement de Paris vous propose
             </p>
             <ul>
-              <li><i class="ri-check-double-line"></i> Ullamco laboris nisi ut aliquip ex ea commodo consequat</li>
-              <li><i class="ri-check-double-line"></i> Duis aute irure dolor in reprehenderit in voluptate velit</li>
-              <li><i class="ri-check-double-line"></i> Ullamco laboris nisi ut aliquip ex ea commodo consequat</li>
+              <li><i class="ri-check-double-line"></i> Un éditeur de sondage totalement personnalisable</li>
+              <li><i class="ri-check-double-line"></i> La possibilité de récupérer un nombre de réponses illimité</li>
+              <li><i class="ri-check-double-line"></i> Notre système d'analyse de résultat</li>
             </ul>
           </div>
           <div class="col-lg-6 pt-4 pt-lg-0" data-aos="fade-up" data-aos-delay="300">
             <p>
-              Ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate
-              velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
-              culpa qui officia deserunt mollit anim id est laborum.
+              ONLINE SURVEY est notre réponse à vos questions, cet outils très puissant permet de prendre de meilleur décision pour son entreprise
             </p>
-            <a href="#" class="btn-learn-more">Learn More</a>
+            <a href="#" class="btn-learn-more">En savoir plus</a>
           </div>
         </div>
 
@@ -195,7 +193,7 @@
                   <div class="count-box">
                     <i class="icofont-simple-smile"></i>
                     <span data-toggle="counter-up">65</span>
-                    <p><strong>Happy Clients</strong> consequuntur voluptas nostrum aliquid ipsam architecto ut.</p>
+                    <p><strong>Clients satisfaits</strong> nous ont déjà recommandé</p>
                   </div>
                 </div>
 
@@ -203,7 +201,7 @@
                   <div class="count-box">
                     <i class="icofont-document-folder"></i>
                     <span data-toggle="counter-up">85</span>
-                    <p><strong>Projects</strong> adipisci atque cum quia aspernatur totam laudantium et quia dere tan</p>
+                    <p><strong>Projets</strong> déjà accompagnés</p>
                   </div>
                 </div>
 
@@ -211,15 +209,15 @@
                   <div class="count-box">
                     <i class="icofont-clock-time"></i>
                     <span data-toggle="counter-up">12</span>
-                    <p><strong>Years of experience</strong> aut commodi quaerat modi aliquam nam ducimus aut voluptate non vel</p>
+                    <p><strong>Années d'expériences</strong> dans l'édition de logiciels professionnels</p>
                   </div>
                 </div>
 
                 <div class="col-md-6 d-md-flex align-items-md-stretch">
                   <div class="count-box">
                     <i class="icofont-award"></i>
-                    <span data-toggle="counter-up">15</span>
-                    <p><strong>Awards</strong> rerum asperiores dolor alias quo reprehenderit eum et nemo pad der</p>
+                    <span data-toggle="counter-up">5</span>
+                    <p><strong>Récompensé</strong> meilleur plateform de sondage en ligne de l'année</p>
                   </div>
                 </div>
               </div>
@@ -230,60 +228,13 @@
       </div>
     </section><!-- End Counts Section -->
 
-    <!-- ======= Services Section ======= -->
-    <section id="services" class="services">
-      <div class="container">
-
-        <div class="section-title" data-aos="fade-up">
-          <h2>Services</h2>
-          <p>Magnam dolores commodi suscipit eius consequatur ex aliquid fug</p>
-        </div>
-
-        <div class="row">
-          <div class="col-md-6 col-lg-3 d-flex align-items-stretch mb-5 mb-lg-0">
-            <div class="icon-box" data-aos="fade-up" data-aos-delay="100">
-              <div class="icon"><i class="bx bxl-dribbble"></i></div>
-              <h4 class="title"><a href="">Lorem Ipsum</a></h4>
-              <p class="description">Voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi</p>
-            </div>
-          </div>
-
-          <div class="col-md-6 col-lg-3 d-flex align-items-stretch mb-5 mb-lg-0">
-            <div class="icon-box" data-aos="fade-up" data-aos-delay="200">
-              <div class="icon"><i class="bx bx-file"></i></div>
-              <h4 class="title"><a href="">Sed ut perspiciatis</a></h4>
-              <p class="description">Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore</p>
-            </div>
-          </div>
-
-          <div class="col-md-6 col-lg-3 d-flex align-items-stretch mb-5 mb-lg-0">
-            <div class="icon-box" data-aos="fade-up" data-aos-delay="300">
-              <div class="icon"><i class="bx bx-tachometer"></i></div>
-              <h4 class="title"><a href="">Magni Dolores</a></h4>
-              <p class="description">Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia</p>
-            </div>
-          </div>
-
-          <div class="col-md-6 col-lg-3 d-flex align-items-stretch mb-5 mb-lg-0">
-            <div class="icon-box" data-aos="fade-up" data-aos-delay="400">
-              <div class="icon"><i class="bx bx-world"></i></div>
-              <h4 class="title"><a href="">Nemo Enim</a></h4>
-              <p class="description">At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis</p>
-            </div>
-        </div>
-
-        </div>
-
-      </div>
-    </section><!-- End Services Section -->
-
     <!-- ======= Testimonials Section ======= -->
     <section id="testimonials" class="testimonials section-bg">
       <div class="container">
 
         <div class="section-title" data-aos="fade-up">
           <h2>Testimonials</h2>
-          <p>Magnam dolores commodi suscipit eum quidem consectetur velit</p>
+          <p>Quelques mots de nos clients</p>
         </div>
 
         <div class="owl-carousel testimonials-carousel" data-aos="fade-up" data-aos-delay="200">
@@ -295,8 +246,7 @@
               <h4>Ceo &amp; Founder</h4>
               <p>
                 <i class="bx bxs-quote-alt-left quote-icon-left"></i>
-                Proin iaculis purus consequat sem cure digni ssim donec porttitora entum suscipit rhoncus. Accusantium quam, ultricies eget id, aliquam eget nibh et. Maecen aliquam, risus at semper.
-                <i class="bx bxs-quote-alt-right quote-icon-right"></i>
+                Les enquêtes nous permettent de vérifier si nous respectons nos engagements.<i class="bx bxs-quote-alt-right quote-icon-right"></i>
               </p>
             </div>
           </div>
@@ -308,8 +258,7 @@
               <h4>Designer</h4>
               <p>
                 <i class="bx bxs-quote-alt-left quote-icon-left"></i>
-                Export tempor illum tamen malis malis eram quae irure esse labore quem cillum quid cillum eram malis quorum velit fore eram velit sunt aliqua noster fugiat irure amet legam anim culpa.
-                <i class="bx bxs-quote-alt-right quote-icon-right"></i>
+                Nous avons toujours été une entreprise centrée sur le client, mais ONLINE SURVEY nous aide à être encore plus centrés sur ce point. <i class="bx bxs-quote-alt-right quote-icon-right"></i>
               </p>
             </div>
           </div>
@@ -321,8 +270,7 @@
               <h4>Store Owner</h4>
               <p>
                 <i class="bx bxs-quote-alt-left quote-icon-left"></i>
-                Enim nisi quem export duis labore cillum quae magna enim sint quorum nulla quem veniam duis minim tempor labore quem eram duis noster aute amet eram fore quis sint minim.
-                <i class="bx bxs-quote-alt-right quote-icon-right"></i>
+                ONLINE SURVEY nous a vraiment aidés à comprendre où vont nos tendances et nous aide vraiment à prévoir les choses.<i class="bx bxs-quote-alt-right quote-icon-right"></i>
               </p>
             </div>
           </div>
@@ -334,7 +282,7 @@
               <h4>Freelancer</h4>
               <p>
                 <i class="bx bxs-quote-alt-left quote-icon-left"></i>
-                Fugiat enim eram quae cillum dolore dolor amet nulla culpa multos export minim fugiat minim velit minim dolor enim duis veniam ipsum anim magna sunt elit fore quem dolore labore illum veniam.
+                Pour toujours satisfaire mes clients je peux compter sur ONLINE SURVEY.
                 <i class="bx bxs-quote-alt-right quote-icon-right"></i>
               </p>
             </div>
@@ -347,8 +295,7 @@
               <h4>Entrepreneur</h4>
               <p>
                 <i class="bx bxs-quote-alt-left quote-icon-left"></i>
-                Quis quorum aliqua sint quem legam fore sunt eram irure aliqua veniam tempor noster veniam enim culpa labore duis sunt culpa nulla illum cillum fugiat legam esse veniam culpa fore nisi cillum quid.
-                <i class="bx bxs-quote-alt-right quote-icon-right"></i>
+                ONLINE SURVEY est l'un de nos outils fondamentaux.<i class="bx bxs-quote-alt-right quote-icon-right"></i>
               </p>
             </div>
           </div>
@@ -375,10 +322,10 @@
               <h4><sup>€</sup>0<span> / Mois</span></h4>
               <ul>
                 <li>limite de 5 sondages/mois</li>
-                <li>Nec feugiat nisl</li>
-                <li>Nulla at volutpat dola</li>
-                <li class="na">Pharetra massa</li>
-                <li class="na">Massa ultricies mi</li>
+                <li>limite de 10 questions/sondages</li>
+                <li>limite de 5 réponses/questions</li>
+                <li class="na">Analyseur d'enqûete</li>
+                <li class="na">Assistance 24h/24 et 7j/7</li>
               </ul>
               <div class="btn-wrap">
                 <a href="#" class="btn-buy">Inscrivez-vous !</a>
@@ -388,31 +335,31 @@
 
           <div class="col-lg-4 col-md-6 mt-4 mt-md-0">
             <div class="box recommended" data-aos="zoom-in" data-aos-delay="100">
-              <h3>Business</h3>
+              <h3>Entrepreneur</h3>
               <h4><sup>$</sup>19<span> / month</span></h4>
               <ul>
-                <li>Aida dere</li>
-                <li>Nec feugiat nisl</li>
-                <li>Nulla at volutpat dola</li>
-                <li>Pharetra massa</li>
-                <li class="na">Massa ultricies mi</li>
+                <li>Nombre de sondage illimité</li>
+                <li>Nombre de questions/sondages illimité</li>
+                <li>Nombre de réponses/questions illimité</li>
+                <li>Analyseur d'enqûete</li>
+                <li class="na">Assistance 24h/24 et 7j/7</li>
               </ul>
               <div class="btn-wrap">
-                <a href="#" class="btn-buy">Buy Now</a>
+                <a href="#" class="btn-buy">Achetez maintenant</a>
               </div>
             </div>
           </div>
 
           <div class="col-lg-4 col-md-6 mt-4 mt-lg-0">
             <div class="box" data-aos="zoom-in-left" data-aos-delay="200">
-              <h3>Developer</h3>
+              <h3>Entreprise</h3>
               <h4><sup>$</sup>29<span> / month</span></h4>
               <ul>
-                <li>Aida dere</li>
-                <li>Nec feugiat nisl</li>
-                <li>Nulla at volutpat dola</li>
-                <li>Pharetra massa</li>
-                <li>Massa ultricies mi</li>
+              <li>Nombre de sondage illimité</li>
+                <li>Nombre de questions/sondages illimité</li>
+                <li>Nombre de réponses/questions illimité</li>
+                <li>Analyseur d'enqûete</li>
+                <li>Assistance 24h/24 et 7j/7</li>
               </ul>
               <div class="btn-wrap">
                 <a href="#" class="btn-buy">Buy Now</a>
@@ -437,8 +384,7 @@
 
           <div data-aos="fade-up" data-aos-delay="100">
             <div class="contact-about">
-              <h3>Online Survey</h3>
-              <p>Cras fermentum odio eu feugiat. Justo eget magna fermentum iaculis eu non diam phasellus. Scelerisque felis imperdiet proin fermentum leo. Amet volutpat consequat mauris nunc congue.</p>
+              <p>Besoins de renseignements ? Une proposition commercial ? Ou autres ? Nous sommes disponible 24h/24 et 7j/7 alors n'hésitez plus, contactez-nous !</p>
               <div class="social-links">
                 <a href="#" class="twitter"><i class="icofont-twitter"></i></a>
                 <a href="#" class="facebook"><i class="icofont-facebook"></i></a>
@@ -452,17 +398,17 @@
             <div class="info">
               <div>
                 <i class="ri-map-pin-line"></i>
-                <p>A108 Adam Street<br>New York, NY 535022</p>
+                <p>143 Rue d'Alésia<br>PARIS, 75014</p>
               </div>
 
               <div>
                 <i class="ri-mail-send-line"></i>
-                <p>info@example.com</p>
+                <p>contact@bigbrother.com</p>
               </div>
 
               <div>
                 <i class="ri-phone-line"></i>
-                <p>+1 5589 55488 55s</p>
+                <p>+33987654321</p>
               </div>
 
             </div>
@@ -480,14 +426,7 @@
       <div class="row d-flex align-items-center">
         <div class="col-lg-6 text-lg-left text-center">
           <div class="copyright">
-            &copy; Copyright <strong>Vesperr</strong>. All Rights Reserved
-          </div>
-          <div class="credits">
-            <!-- All the links in the footer should remain intact. -->
-            <!-- You can delete the links only if you purchased the pro version. -->
-            <!-- Licensing information: https://bootstrapmade.com/license/ -->
-            <!-- Purchase the pro version with working PHP/AJAX contact form: https://bootstrapmade.com/vesperr-free-bootstrap-template/ -->
-            Designed by <a href="https://bootstrapmade.com/">BootstrapMade</a>
+            Copyright &copy; 2008-2020 <strong>ONLINE SURVEY</strong>
           </div>
         </div>
       </div>
