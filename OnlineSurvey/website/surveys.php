@@ -51,12 +51,19 @@ if (!isset($_SESSION['pseudo'])) {
 	$row = $req_owner_surv->fetch_assoc();
 	$title = $row['title'];
 	$_SESSION['poll_id'] = $_POST['poll_id'];
-
+	if ($title == "")
+	{
+		$title = "Sondage sans nom";
+	}
 	echo "<h2 style='text-decoration: underline;'>$title</h2>";
 	$req_owner_quest = $mysqli->query("SELECT * FROM questions WHERE `poll` = '$_POST[poll_id]'"); // question / mandatory / type
 	$req_owner_quest->data_seek(0);
 	$_SESSION['qNum'] = 1;
 	while ($row = $req_owner_quest->fetch_assoc()) {
+		if ($row['question'] == ""){
+			$row['question'] = "Question sans nom";
+		}
+
 		echo "<h4>$row[question]</h4>";
 		$quest_id = $row['id'];
 		$quest_type = $row['type'];
@@ -95,6 +102,10 @@ if (!isset($_SESSION['pseudo'])) {
 				else {
 					?> <input type="radio" name="unique<?php echo "$_SESSION[qNum]"?>" value="<?php echo "$aNum"?>"/><?php // onclick="document.getElementById('id').checked = false;"	
 				}	
+			}
+			if ($row['answer'] == "" && $quest_type != 2)
+			{
+				$row['answer'] = "réponse sans nom";
 			}
 			echo "$row[answer]</br>"; // $_SESSION[qNum]$aNum aide répère
 			$aNum++;
