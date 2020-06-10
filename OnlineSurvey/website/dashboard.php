@@ -64,7 +64,8 @@
                         </span>
                     </button>
                 </span>
-            </div>    <div class="app-header__content">
+            </div>    
+            <div class="app-header__content">
                 <div class="app-header-left">
                     <div class="search-wrapper">
                         <div class="input-holder">
@@ -92,7 +93,8 @@
                                 Settings
                             </a>
                         </li>
-                    </ul>        </div>
+                    </ul>        
+                </div>
                 <div class="app-header-right">
                     <div class="header-btn-lg pr-0">
                         <div class="widget-content p-0">
