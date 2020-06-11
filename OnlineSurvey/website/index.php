@@ -383,10 +383,10 @@
             <div class="contact-about">
               <p>Besoins de renseignements ? Une proposition commercial ? Ou autres ? Nous sommes disponible 24h/24 et 7j/7 alors n'hésitez plus, contactez-nous !</p>
               <div class="social-links">
-                <a href="https://twitter.com/OnlineSurvey6" class="twitter"><i class="icofont-twitter"></i></a>
-                <a href="https://www.facebook.com/Online-Survey-105956961145168/" class="facebook"><i class="icofont-facebook"></i></a>
+                <a href="https://twitter.com/OnlineSurvey6" target="_blank" class="twitter"><i class="icofont-twitter"></i></a>
+                <a href="https://www.facebook.com/Online-Survey-105956961145168/" target="_blank" class="facebook"><i class="icofont-facebook"></i></a>
                 <a href="#" class="instagram"><i class="icofont-instagram"></i></a>
-                <a href="https://www.linkedin.com/in/online-survey-a785b91ab/" class="linkedin"><i class="icofont-linkedin"></i></a>
+                <a href="https://www.linkedin.com/in/online-survey-a785b91ab/" target="_blank" class="linkedin"><i class="icofont-linkedin"></i></a>
               </div>
             </div>
           </div>
