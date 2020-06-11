@@ -217,7 +217,7 @@
                   <div class="count-box">
                     <i class="icofont-award"></i>
                     <span data-toggle="counter-up">5</span>
-                    <p><strong>Récompensé</strong> meilleur plateforme de sondage en ligne de l'année</p>
+                    <p><strong>Récompenses</strong> dans l'édition logiciels</p>
                   </div>
                 </div>
               </div>
