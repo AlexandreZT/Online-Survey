@@ -217,7 +217,7 @@
                   <div class="count-box">
                     <i class="icofont-award"></i>
                     <span data-toggle="counter-up">5</span>
-                    <p><strong>Récompensé</strong> meilleur plateform de sondage en ligne de l'année</p>
+                    <p><strong>Récompensé</strong> meilleur plateforme de sondage en ligne de l'année</p>
                   </div>
                 </div>
               </div>
@@ -324,6 +324,7 @@
                 <li>limite de 5 sondages/mois</li>
                 <li>limite de 10 questions/sondages</li>
                 <li>limite de 5 réponses/questions</li>
+                <li class="na">Exportation de données</li>
                 <li class="na">Analyseur d'enqûete</li>
                 <li class="na">Assistance 24h/24 et 7j/7</li>
               </ul>
@@ -336,11 +337,12 @@
           <div class="col-lg-4 col-md-6 mt-4 mt-md-0">
             <div class="box recommended" data-aos="zoom-in" data-aos-delay="100">
               <h3>Compte Profesionnel</h3>
-              <h4><sup>€</sup>30<span> / Mois</span></h4>
+              <h4><sup>€</sup>24,99<span> / Mois</span></h4>
               <ul>
                 <li>Nombre de sondage illimité</li>
                 <li>Nombre de questions/sondages illimité</li>
                 <li>Nombre de réponses/questions illimité</li>
+                <li>Exportation de données</li>
                 <li>Analyseur d'enqûete</li>
                 <li class="na">Assistance 24h/24 et 7j/7</li>
               </ul>
@@ -353,11 +355,12 @@
           <div class="col-lg-4 col-md-6 mt-4 mt-lg-0">
             <div class="box" data-aos="zoom-in-left" data-aos-delay="200">
               <h3>Compte Premium</h3>
-              <h4><sup>€</sup>60<span> / Mois</span></h4>
+              <h4><sup>€</sup>59,99<span> / Mois</span></h4>
               <ul>
-              <li>Nombre de sondage illimité</li>
+                <li>Nombre de sondage illimité</li>
                 <li>Nombre de questions/sondages illimité</li>
                 <li>Nombre de réponses/questions illimité</li>
+                <li>Exportation de données</li>
                 <li>Analyseur d'enqûete</li>
                 <li>Assistance 24h/24 et 7j/7</li>
               </ul>
