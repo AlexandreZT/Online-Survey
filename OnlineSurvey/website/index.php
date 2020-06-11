@@ -335,8 +335,8 @@
 
           <div class="col-lg-4 col-md-6 mt-4 mt-md-0">
             <div class="box recommended" data-aos="zoom-in" data-aos-delay="100">
-              <h3>Entrepreneur</h3>
-              <h4><sup>$</sup>19<span> / month</span></h4>
+              <h3>Compte Profesionnel</h3>
+              <h4><sup>€</sup>30<span> / Mois</span></h4>
               <ul>
                 <li>Nombre de sondage illimité</li>
                 <li>Nombre de questions/sondages illimité</li>
@@ -345,15 +345,15 @@
                 <li class="na">Assistance 24h/24 et 7j/7</li>
               </ul>
               <div class="btn-wrap">
-                <a href="#" class="btn-buy">Achetez maintenant</a>
+                <a href="#" class="btn-buy">Sélectionner !</a>
               </div>
             </div>
           </div>
 
           <div class="col-lg-4 col-md-6 mt-4 mt-lg-0">
             <div class="box" data-aos="zoom-in-left" data-aos-delay="200">
-              <h3>Entreprise</h3>
-              <h4><sup>$</sup>29<span> / month</span></h4>
+              <h3>Compte Premium</h3>
+              <h4><sup>€</sup>60<span> / Mois</span></h4>
               <ul>
               <li>Nombre de sondage illimité</li>
                 <li>Nombre de questions/sondages illimité</li>
@@ -362,7 +362,7 @@
                 <li>Assistance 24h/24 et 7j/7</li>
               </ul>
               <div class="btn-wrap">
-                <a href="#" class="btn-buy">Buy Now</a>
+                <a href="#" class="btn-buy">Sélectionner !</a>
               </div>
             </div>
           </div>
