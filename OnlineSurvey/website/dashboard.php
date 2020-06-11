@@ -15,20 +15,10 @@
     <!-- Favicons -->
     <link href="assets/img/favicon3.png" rel="icon">
 
-    <title>Analytics Dashboard - This is an example dashboard created using build-in elements and components.</title>
+    <title>Online Survey - Tableau de Bord</title>
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, shrink-to-fit=no" />
     <meta name="description" content="This is an example dashboard created using build-in elements and components.">
     <meta name="msapplication-tap-highlight" content="no">
-    <!--
-    =========================================================
-    * ArchitectUI HTML Theme Dashboard - v1.0.0
-    =========================================================
-    * Product Page: https://dashboardpack.com
-    * Copyright 2019 DashboardPack (https://dashboardpack.com)
-    * Licensed under MIT (https://github.com/DashboardPack/architectui-html-theme-free/blob/master/LICENSE)
-    =========================================================
-    * The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
-    -->
     <link href="./main.css" rel="stylesheet">
 </head>
 
@@ -78,19 +68,19 @@
                         <li class="nav-item">
                             <a href="javascript:void(0);" class="nav-link">
                                 <i class="nav-link-icon fa fa-database"> </i>
-                                Statistics
+                                Statistiques
                             </a>
                         </li>
                         <li class="btn-group nav-item">
                             <a href="javascript:void(0);" class="nav-link">
                                 <i class="nav-link-icon fa fa-edit"></i>
-                                Projects
+                                Projets
                             </a>
                         </li>
                         <li class="dropdown nav-item">
                             <a href="javascript:void(0);" class="nav-link">
                                 <i class="nav-link-icon fa fa-cog"></i>
-                                Settings
+                                Paramètres
                             </a>
                         </li>
                     </ul>        
@@ -121,12 +111,13 @@
                                         <i class="fa fa-angle-down ml-2 opacity-8"></i>
                                     </a>
                                     <div tabindex="-1" role="menu" aria-hidden="true" class="dropdown-menu dropdown-menu-right">
-                                        <button type="button" tabindex="0" class="dropdown-item">User Account</button>
-                                        <button type="button" tabindex="0" class="dropdown-item">Settings</button>
-                                        <h6 tabindex="-1" class="dropdown-header">Header</h6>
-                                        <button type="button" tabindex="0" class="dropdown-item">Actions</button>
+                                        <button type="button" tabindex="0" class="dropdown-item">Mon comptes</button>
+                                        <button type="button" tabindex="0" class="dropdown-item">Paramètres</button>
+                                        <button type="button" tabindex="0" class="dropdown-item">Contact</button>
                                         <div tabindex="-1" class="dropdown-divider"></div>
-                                        <button type="button" tabindex="0" class="dropdown-item">Dividers</button>
+                                        <form action="logout.php">
+                                            <input tabindex="0" class="dropdown-item" type="submit" value="Se déconnecter" />
+                                        </form>
                                     </div>
                                 </div>
                             </div>
@@ -167,14 +158,14 @@
                     </div>    <div class="scrollbar-sidebar">
                         <div class="app-sidebar__inner">
                             <ul class="vertical-nav-menu">
-                                <li class="app-sidebar__heading">Dashboards</li>
+                                <li class="app-sidebar__heading">Tableau de bords</li>
                                 <li>
                                     <a href="#" class="mm-active">
-                                        Mon Dashboard
+                                        Tableau de bord
                                     </a>
                                 </li>
                                 
-                                <li class="app-sidebar__heading">Forms</li>
+                                <li class="app-sidebar__heading">Actions</li>
                                 <li>
                                     <a href="export-to-json.php">
                                         <i class="metismenu-icon pe-7s-download">
@@ -194,12 +185,12 @@
                                         Répondre à un questionnaire
                                     </a>
                                 </li>
-                                <li class="app-sidebar__heading">PRO Version</li>
+                                <li class="app-sidebar__heading">Offres</li>
                                 <li>
                                     <a href="#pricing" target="_blank">
                                     <i class="metismenu-icon pe-7s-rocket"></i>
                                         </i>
-                                        Upgrade to PRO
+                                        Abonnements et tarifs
                                     </a>
                                 </li>
                             </ul>
@@ -211,8 +202,8 @@
                         <div class="app-page-title">
                             <div class="page-title-wrapper">
                                 <div class="page-title-heading">
-                                    <div>Votre Dashboard
-                                        <div class="page-title-subheading">This is an example dashboard created using build-in elements and components.</div>
+                                    <div>Votre tableau de bord
+                                        <div class="page-title-subheading"></div>
                                         <a href="poll-creation.php">Créer un sondage</a>
                                     </div>
                                 </div>
