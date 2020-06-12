@@ -400,7 +400,7 @@
 
               <div>
                 <i class="ri-mail-send-line"></i>
-                <p>contact@bigbrother.com</p>
+                <p>onlinesurvey.contact@gmail.com</p>
               </div>
 
               <div>
