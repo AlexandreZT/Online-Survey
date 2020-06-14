@@ -60,7 +60,10 @@
           <?php
               if(isset($_SESSION['pseudo'])) {
             ?> 
-            <li class="get-started"><a href="logout.php">Déconnexion</a></li>
+            <!--<li class="get-started"><a href="logout.php">Déconnexion</a></li>-->
+			      <script type="text/javascript">
+			      	window.location.href = 'dashboard.php';
+			        </script>
             <?php
               }
               else {

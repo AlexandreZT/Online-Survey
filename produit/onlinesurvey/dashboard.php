@@ -26,7 +26,7 @@
     <div class="app-container app-theme-white body-tabs-shadow fixed-sidebar fixed-header">
         <div class="app-header header-shadow">
             <div class="app-header__logo">
-                <a href="index.php"><img src="assets/img/banner3.png" alt="" class="img-fluid"></a>
+                <!--<a href="index.php"><img src="assets/img/banner3.png" alt="" class="img-fluid"></a>-->
                 <div class="header__pane ml-auto">
                     <div>
                         <button type="button" class="hamburger close-sidebar-btn hamburger--elastic" data-class="closed-sidebar">
