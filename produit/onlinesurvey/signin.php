@@ -55,18 +55,15 @@
           <?php
               if(isset($_SESSION['pseudo'])) {
             ?> 
-            <li><a href="logout.php">Déconnexion</a></li>
-            <!-- <li class="get-started"><a href="login.php">Connexion</a></li> -->
+            <li class="get-started"><a href="logout.php">Déconnexion</a></li>
             <?php
               }
               else {
             ?>
             <li class="get-started"><a href="login.php">Connexion</a></li>
-            <!-- <li><a href="logout.php">Déconnexion</a></li> -->
             <?php
           }
           ?>
-          <li class="get-started"><a href="signin.php">Inscription</a></li>
         </ul>
       </nav><!-- .nav-menu -->
 
@@ -76,7 +73,7 @@
   <div id="container">
         <form class="login" action="signin.php" method="post"> <!-- nom de class prete à confusion -->
             <h2><b>Rejoignez-nous !</b></h2>
-            <label><b>Nom d'Utilisateur</b></label>
+            <label><b>Nom d'Utilisateur<span class="infobulle" aria-label="Uniquement les caractère miniscules et chiffres sont autorisé"> *</span></b></label>
             <input type="text" name="pseudo" placeholder="Veuillez saisir un nom d'utilisateur" value="" />
             <label><b>Mot de Passe</b></label>
             <input type="password" name="mdp" placeholder="Veuillez saisir un mot de passe" value="" />

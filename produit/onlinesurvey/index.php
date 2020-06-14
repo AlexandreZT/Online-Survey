@@ -61,13 +61,11 @@
               if(isset($_SESSION['pseudo'])) {
             ?> 
             <li class="get-started"><a href="logout.php">Déconnexion</a></li>
-            <!-- <li class="get-started"><a href="login.php">Connexion</a></li> -->
             <?php
               }
               else {
             ?>
             <li class="get-started"><a href="login.php">Connexion</a></li>
-            <!-- <li><a href="logout.php">Déconnexion</a></li> -->
             <?php
           }
           ?>
