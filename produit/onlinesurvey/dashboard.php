@@ -158,7 +158,7 @@
                     </div>    <div class="scrollbar-sidebar">
                         <div class="app-sidebar__inner">
                             <ul class="vertical-nav-menu">
-                                <li class="app-sidebar__heading">Tableau de bords</li>
+                                <li class="app-sidebar__heading">Tableaux de bord</li>
                                 <li>
                                     <a href="#" class="mm-active">
                                         Tableau de bord

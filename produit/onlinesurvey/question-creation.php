@@ -98,7 +98,7 @@
                 <!--<option value="none">type de réponse</option> no value -->
                 <option value="unique">Choix unique</option>
                 <option value="multiple">Choix multiple</option>
-                <option value="text">Zone de text</option>
+                <option value="text">Zone de texte</option>
             </select>
             <!-- option de réponse obligatoire (if empty alors invalide) -->
             <label>obligatoire</label>

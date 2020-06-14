@@ -130,7 +130,11 @@ if (isset($_POST['pseudo'], $_POST['mail'], $_POST['mdp'])) { //l'utilisateur à
         if (!mysqli_query($mysqli, "INSERT INTO members SET pseudo='" . $_POST['pseudo'] . "', mail='" . $_POST['mail'] . "', mdp='" . md5($_POST['mdp']) . "'")) { //on crypte le mot de passe avec la fonction propre à PHP: md5()
           $loginfo = "Une erreur s'est produite: " . mysqli_error($mysqli); //je conseille de ne pas afficher les erreurs aux visiteurs mais de l'enregistrer dans un fichier log
         } else {
-          echo "<p id='reginfo'>Vous êtes inscrit avec succès!</p>";
+          ?>
+			      <script type="text/javascript">
+			      	window.location.href = 'login.php';
+			        </script>
+		        <?php
         }
     }
 }

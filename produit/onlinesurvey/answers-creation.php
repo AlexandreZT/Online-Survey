@@ -85,7 +85,7 @@
 	if ($_SESSION['type'] == 2) { // si c'est une réponse libre (texte)
 		?>
 		<form id="text-answers-creation" action="answers-creation.php" method="post">
-		<textarea disabled style="resize: none" name="message" cols="40" rows="5" placeholder="Réponse libre de vos clients"></textarea>
+		<textarea disabled style="resize: none" name="message" cols="40" rows="5" placeholder="Réponse libre"></textarea>
 		<br>
         <!-- si la réponse était du text alors on termine direction le questionnaire sinon on créer le choix de réponse -->
         <input type="submit" name="next" value="Question suivante">
@@ -106,8 +106,8 @@
 <form id="answers-creation" action="answers-creation.php" method="post">
 		<!-- Choix de réponse -->
 		<input type="text" name="answer<?php echo "$i"?>" size="50" maxlength="100" placeholder="Saisissez un choix de réponse" value="" />
-        <input type="submit" name="Add" value="+" />
-		<input type="submit" name="Del" value="x" />
+		<input type="submit" name="Add" value="+" style="background-color:#337813;border:inherit;border-radius: 0px;"/>
+		<input type="submit" name="Del" value="x" style="background-color:#8a1616;border:inherit;border-radius: 0px;">
         <br> <br> 
 <?php 
 		$i++;

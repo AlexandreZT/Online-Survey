@@ -24,7 +24,7 @@ if (isset($_POST['connexion'])) { // si le bouton "Connexion" est appuyé
                 // si il y a un résultat, mysqli_num_rows() nous donnera alors 1
                 // si mysqli_num_rows() retourne 0 c'est qu'il a trouvé aucun résultat
                 if (mysqli_num_rows($Requete) == 0) {
-                    $logerror =  "The username or password is incorrect, the account was not found..";
+                    $logerror =  "Le nom d'utilisateur ou le mot de passe est incorrect, le compte n'a pas été trouvé..";
                 } else {
                     // on ouvre la session avec $_SESSION:
                     $_SESSION['pseudo'] = $Pseudo; // la session peut être appelée différemment et son contenu aussi peut être autre chose que le pseudo
@@ -127,11 +127,15 @@ if (isset($_POST['connexion'])) { // si le bouton "Connexion" est appuyé
             echo "<p>$logerror</p>";
         }
         if ((isset($Pseudo) and isset($open))) {
-            echo "<p><b>You're connected $Pseudo!</b></p>";
             // echo "<p>Status de la sessions : $session_status </p>";
             $req_id = $mysqli->query("SELECT id FROM members WHERE pseudo = '$_SESSION[pseudo]'");
             $row = mysqli_fetch_array($req_id); // sous forme de tableau
             $_SESSION['id'] = $row['id']; // Je récupère l'id
+            ?>
+			      <script type="text/javascript">
+			      	window.location.href = 'dashboard.php';
+			        </script>
+		        <?php
         }
     ?>
 
