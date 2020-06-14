@@ -24,7 +24,7 @@ if (!isset($_SESSION['pseudo'])) {
     $fp = fopen('MySurveyData.json', 'w');
     fwrite($fp, json_encode($surveyArray, JSON_UNESCAPED_UNICODE));
     fclose($fp);
-    echo "<p style='text-align:center; margin-top:15%'>Vos données de sondages ont été téléchargé, redirection dans 3 secondes !</p>";
-    header("refresh:3; url=dashboard.php"); 
+    echo "<p style='text-align:center; margin-top:15%;'>Vos données <span style='text-decoration: underline;color:black;'>MySurveyData.json</span> ont été placés dans le dossier /onlinesurvey !</p>";
+    header("refresh:5; url=dashboard.php"); 
 }
 ?>
