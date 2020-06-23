@@ -319,8 +319,8 @@
                 <li>limite de 5 sondages/mois</li>
                 <li>limite de 10 questions/sondages</li>
                 <li>limite de 5 réponses/questions</li>
+                <li>Analyseur d'enqûete</li>
                 <li class="na">Exportation de données</li>
-                <li class="na">Analyseur d'enqûete</li>
                 <li class="na">Assistance 24h/24 et 7j/7</li>
               </ul>
               <div class="btn-wrap">
@@ -337,8 +337,8 @@
                 <li>Nombre de sondage illimité</li>
                 <li>Nombre de questions/sondages illimité</li>
                 <li>Nombre de réponses/questions illimité</li>
-                <li>Exportation de données</li>
                 <li>Analyseur d'enqûete</li>
+                <li>Exportation de données</li>  
                 <li class="na">Assistance 24h/24 et 7j/7</li>
               </ul>
               <div class="btn-wrap">
@@ -355,8 +355,8 @@
                 <li>Nombre de sondage illimité</li>
                 <li>Nombre de questions/sondages illimité</li>
                 <li>Nombre de réponses/questions illimité</li>
-                <li>Exportation de données</li>
                 <li>Analyseur d'enqûete</li>
+                <li>Exportation de données</li> 
                 <li>Assistance 24h/24 et 7j/7</li>
               </ul>
               <div class="btn-wrap">

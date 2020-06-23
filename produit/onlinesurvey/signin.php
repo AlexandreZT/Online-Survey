@@ -76,7 +76,7 @@
   <div id="container">
         <form class="login" action="signin.php" method="post"> <!-- nom de class prete à confusion -->
             <h2><b>Rejoignez-nous !</b></h2>
-            <label><b>Nom d'Utilisateur<span class="infobulle" aria-label="Uniquement les caractère miniscules et chiffres sont autorisé"> *</span></b></label>
+            <label><b>Nom d'Utilisateur<span class="infobulle" aria-label="Uniquement les caractères miniscules et chiffres sont autorisés"> *</span></b></label>
             <input type="text" name="pseudo" placeholder="Veuillez saisir un nom d'utilisateur" value="" />
             <label><b>Mot de Passe</b></label>
             <input type="password" name="mdp" placeholder="Veuillez saisir un mot de passe" value="" />
