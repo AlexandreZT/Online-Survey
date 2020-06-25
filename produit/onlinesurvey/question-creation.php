@@ -124,7 +124,7 @@
         else if ($_POST['type'] == "multiple") {
             $_SESSION['type'] = 1; // "multiple"
         }
-        else {
+        else if ($_POST['type'] == "text"){
             $_SESSION['type'] = 2; // "text"
         }
 
@@ -132,13 +132,13 @@
 
 
         $req_max = $mysqli->query("SELECT MAX(id) FROM `questions` WHERE `poll` = '$_SESSION[poll]'");
-    	$row = mysqli_fetch_array($req_max);
+    	  $row = mysqli_fetch_array($req_max);
         $_SESSION['max'] = $row['MAX(id)']; // Je récupère l'id max
 
         // récupère l'id de la question
-    	$req_id = $mysqli->query("SELECT id FROM questions WHERE `id` = '$_SESSION[max]'"); // récup le dernier sondage créé
-    	$row = mysqli_fetch_array($req_id); // sous forme de tableau
-    	$_SESSION['choice'] = $row['id']; // Je récupère l'id pour la clé étrangère
+    	  $req_id = $mysqli->query("SELECT id FROM questions WHERE `id` = '$_SESSION[max]'"); // récup le dernier sondage créé
+    	  $row = mysqli_fetch_array($req_id); // sous forme de tableau
+    	  $_SESSION['choice'] = $row['id']; // Je récupère l'id pour la clé étrangère
 
         //$req_questions = $mysqli->query("INSERT INTO questions (`poll`, `question`, `mandatory`,`type`) VALUES (33, 'hacked', 1, 2");
 
