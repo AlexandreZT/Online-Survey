@@ -1,4 +1,5 @@
 # Online Survey est un site de sondage réaliser dans le cadre du projet de fin d'année des contributeurs
 #### Alexandre ZITOUNI -- TINLOT, Manager et Développeur full-stack
-#### Thomas SENSE, Web designer et Assistant Manager
+#### Thomas SENSE, Web designer et développeur front-end
+#### Victoria LeMoine, Chargée de Marketing
 ##### 2PROJ - A.Sc.2 Rennes
